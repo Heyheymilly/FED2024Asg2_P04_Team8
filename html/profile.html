@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Management</title>
+    <link rel="stylesheet" href="../css/profile.css">
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js"></script>
+    <script src="profile.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Account Management</h1>
+
+        <div class="profile-info">
+            <h2>Profile Details</h2>
+
+            <div class="input-group">
+                <label for="username">Your Username</label>
+                <input type="text" id="username" value="" placeholder="Enter username">
+                <button id="update-username">Change</button>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Your Password</label>
+                <input type="password" id="password" placeholder="Enter new password">
+                <button id="update-password">Change</button>
+            </div>
+        </div>
+
+        <div class="membership">
+            <h2>Membership Plan</h2>
+            <p>Current Plan: <span id="membership-plan">Regular</span></p>
+            <button id="update-plan">Upgrade to Premium ($5/mth)</button>
+        </div>
+
+        <div class="security">
+            <h2>Security & Other</h2>
+            <label>
+                <input type="checkbox" id="two-factor-auth"> Two-Factor Authentication
+            </label>
+            <label>
+                <input type="checkbox" id="face-id"> Face ID
+            </label>
+        </div>
+    </div>
+</body>
+</html>
