@@ -76,6 +76,11 @@ main {
     height: 7vh;
     width: 25vw;
     border: 2px solid rgb(51, 95, 47);
+    background-color: rgb(50, 186, 37);
     font-size: 20px;
-    padding: 0 0 0 30px;
+    padding: 5px 5px 5px 10px;
+    color: white;
+} .input-container-css input::placeholder {
+    color: white;
+
 }
