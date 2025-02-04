@@ -4,42 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/css/sign-up.css">
+
+        
+    <!-- Jaro Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@700&family=Akshar:wght@300..700&family=Alata&family=Jaro:opsz@6..72&family=Jersey+10&family=Jersey+25&family=Protest+Strike&family=Ropa+Sans:ital@0;1&family=Rubik+Doodle+Shadow&family=Tilt+Warp&display=swap" rel="stylesheet">
+    <!-- Kumar Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@700&family=Akshar:wght@300..700&family=Alata&family=Jaro:opsz@6..72&family=Jersey+10&family=Jersey+25&family=Kumar+One&family=Protest+Strike&family=Ropa+Sans:ital@0;1&family=Rubik+Doodle+Shadow&family=Tilt+Warp&display=swap" rel="stylesheet">
+
+
+
 </head>
 <body>
-    <div class="signup-container">
-        <!-- Logo -->
-        <img src="/media/MokeSellLogo.png" alt="MokeSell Logo" width="200" height="150">
+    <header>
+        <div class="shop-img-container-css">
+            <img src="/media/MokeSellLogo.png" alt="shop-logo" height="110" width="110">
 
-        <!-- Sign Up Title -->
-        <h1 class="signup-title">Sign Up</h1>
-
-        <!-- Sign Up Form -->
-        <form>
-            <!-- Email Box -->
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" placeholder="Enter your username" required>
-
-            <!-- Password Box -->
-            <input type="password" id="password" name="password" placeholder="Enter your password" required>
-
-            <!-- Re-enter Password -->
-            <input type="password" id="reenter-password" name="reenter-password" placeholder="Re-enter your password" required>
-
-            <!-- Enter OTP -->
-            <input type="text" id="otp" name="otp" placeholder="Enter OTP" required>
-
-            <!-- Get OTP Button -->
-            <div class="sub-box">
-                <button type="button" class="get-otp-btn">Get OTP</button>
+            <div class="header-text-css">
+                <h1 class="kumar-one-regular">MokeSell</h1>
+                <h4 class="jaro">We make shopping easier</h4>   
+                <div class="jaro"> Sign up </div>
             </div>
+        </div>
+    </header>
 
-            <!-- Sign Up Button -->
-            <button type="submit" class="signup-btn">Sign Up</button>
-        </form>
-    </div>
+    <main>
+        <div class="input-container-css">
+            <input type="text" id="emailPhoneNumber" placeholder="Email or Phone Number">
+            <input type="password" id="password" placeholder="Password">
+            <input type="submit" value="Submit" class="jaro" id="submit-clicked">
+        </div>
+    </main>
+       
 </body>
+
+<footer>
+    <center><p>&copy;  MokeSell. All rights reserved.</p></center>
+</footer>
+
 <script src ="../script/sign-up.js" type = "module"></script>
 </html>

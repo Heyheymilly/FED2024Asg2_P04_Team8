@@ -1,79 +1,68 @@
-/* Container */
-.signup-container {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 350px;
+
+/* Imported Fonts */
+
+.jaro {
+    font-family: "Jaro", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.kumar-one-regular {
+font-family: "Kumar One", serif;
+font-weight: 400;
+font-style: normal;
 }
 
-/* Logo */
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #007bff;
-    margin-bottom: 20px;
+/* Main Contents */
+
+
+html, body {
+    background-color: #dcfac7;
+    height: 100%;
+    margin: 0;    
 }
 
-/* Title */
-.signup-title {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #333;
+body {
+    display: flex;
+    flex-direction: column;
 }
 
-/* Input Fields */
-form input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
+main {
+    flex: 1;
 }
 
-form input:focus {
-    border-color: #007bff;
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+/* User defined classes / Id */
+
+.shop-img-container-css
+{    
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    margin-right: 10vw;
+}  .shop-img-container-css img {
+    border-radius: 100px;
+    border: 2px solid #2f673c;
 }
 
-/* Get OTP Sub-box */
-.sub-box {
-    text-align: right;
-    margin-bottom: 15px;
-}
-
-.get-otp-btn {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 4px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.get-otp-btn:hover {
-    background-color: #0056b3;
-}
-
-/* Sign Up Button */
-.signup-btn {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    width: 100%;
-}
-
-.signup-btn:hover {
-    background-color: #218838;
-}
+.header-text-css {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+} .header-text-css h1 {
+    font-size: 40px;
+    color: #2f673c;
+} .header-text-css h4 { /* Slogan (we make shopping easier) */
+    margin: -5vh 0 0 0; 
+    color: #3a503f;
+} .header-text-css div { /* Sign up */ 
+    margin-top: 4vh;
+    font-size: 40px;
+    position: relative;
+    right: 1vw;
+    color: #366e43;
+} 

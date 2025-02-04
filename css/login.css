@@ -72,7 +72,9 @@ main {
     height: 45vh;
     flex-direction: column;
     row-gap: 5vh;
-} .input-container-css input {
+} 
+
+.input-container-css input {
     border-radius: 5px;
     height: 7vh;
     width: 30vw;
@@ -83,7 +85,18 @@ main {
     color: white;
 } .input-container-css input::placeholder {
     color: white;
-} #submit-clicked {
+}
+
+.input-container-css a {
+    text-decoration: none;
+    margin-right: 21.5vw;
+    margin-top: -3vh;
+    color: green;
+} .input-container-css a:hover {
+    color: rgb(101, 132, 105);
+}
+
+#submit-clicked {
     width: 17vw;
     border-radius: 30px;
     padding: 0;
