@@ -1,0 +1,160 @@
+/* Fonts */
+.ibm-plex-mono-regular {
+    font-family: "IBM Plex Mono", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.kumar-one-regular {
+    font-family: "Kumar One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.jaro {
+    font-family: "Jaro", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+  .noto-sans-myanmar-regular {
+    font-family: "Noto Sans Myanmar", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+      
+/* body html */
+
+html, body {
+    background-color: #dcfac7;
+    height: 100%;
+    margin: 0;    
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* Header elements */
+
+.sub-navbar-css {
+    height: 20vh;
+    width: 100vw;
+    background-color: rgba(4, 232, 19, 0.769);
+    display: flex;
+    align-items: center;
+} .sub-navbar-css img {
+    border-radius: 100px;
+    margin-left: 5vw;
+    border: 2px solid #2f673c;
+}
+
+.sub-navbar-css input {
+    border-radius: 5px;
+    border: 2px solid #2f673c;
+    height: 5vh;
+    width: 40vw;
+    margin-left: 5vw;
+    padding: 10px 0 5px 10px;
+    font-size: 25px;
+} .sub-navbar-css input::placeholder {
+    font-size: inherit;
+}
+
+.profile-button {
+    border: none;
+    width: 7vw;
+    display: inline-block;
+    cursor: pointer;
+}
+.profile-button img {
+    display: block;
+    height: auto;
+}
+
+.title-slogan-container-css {
+    height: 17vh;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5vw;
+}  .title-slogan-container-css h1 { /* title */
+    font-size: 40px;
+    color: rgb(239, 239, 239);
+} .title-slogan-container-css h4 { /* slogan */
+    padding: 0;
+    margin-left: 2vw;
+    margin-top: -6vh;
+    color: rgb(21, 38, 26);
+}
+
+/* Main content */
+
+.main-container-css {
+    height: 65vh;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 15vw;
+}
+
+/* Container header */
+
+.category-container-css, .rewards-container-css, .page-options-container-css {
+    padding: 10px 5px 5px 5px;
+    height: 3vh;
+    width: calc(70vw - 5px);
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #2f673c;
+    background-color: #27c14b;
+    align-items: center;
+    color: white;
+    font-size: 15px;
+}
+
+/* Container body */
+
+.category-items-css, .page-options-items-css {
+    width: calc(70vw - 5px);
+    height: 7vh;
+    background-color: #27c14b;
+    padding: 10px 5px 5px 5px;
+    border: 2px solid #2f673c;
+}
+
+.category-items-css ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0;
+    margin-top: 4vh;
+    font-size: 13px;
+}
+
+.rewards-items-css {
+    width: calc(70vw - 5px);
+    height: 14.8vh;
+    background-color: #27c14b;
+    padding: 10px 5px 5px 5px;
+    border: 2px solid #2f673c;
+}
+
+#sub-main-container-css {
+    padding: 18px 0 0 0;
+}
+
+footer {
+    height: 8vh;
+    border: 1px solid black;
+}
+
+  
