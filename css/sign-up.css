@@ -65,6 +65,7 @@ main {
     position: relative;
     right: 1vw;
     color: #366e43;
+    letter-spacing: 3px;
 } 
 
 /* Sign up input */
@@ -76,7 +77,6 @@ main {
     height: 45vh;
     flex-direction: column;
     row-gap: 1vh;
-    border: 1px solid red;
 
 } 
 

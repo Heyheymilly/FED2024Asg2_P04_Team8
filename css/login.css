@@ -63,6 +63,7 @@ main {
     position: relative;
     right: 1vw;
     color: #366e43;
+    letter-spacing: 2px;
 } 
 
 .input-container-css {
