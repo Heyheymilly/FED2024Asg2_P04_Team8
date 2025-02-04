@@ -36,7 +36,7 @@ main {
 
 .shop-img-container-css
 {    
-    height: 35vh;
+    height: 32vh;
     display: flex;
     justify-content: center;
     margin-top: 10vh;
@@ -66,3 +66,71 @@ main {
     right: 1vw;
     color: #366e43;
 } 
+
+/* Sign up input */
+
+.input-container-css {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45vh;
+    flex-direction: column;
+    row-gap: 1vh;
+    border: 1px solid red;
+
+} 
+
+.input-container-css input {
+    border-radius: 5px;
+    height: 10vh;
+    width: 30vw;
+    border: 2px solid rgb(93, 95, 93);
+    background-color: rgb(50, 186, 37);
+    font-size: 20px;
+    padding: 10px 10px 10px 10px;
+    color: white;
+} .input-container-css input::placeholder {
+    color: white;
+}
+
+.input-container-css a {
+    text-decoration: none;
+    margin-right: 21.5vw;
+    margin-top: -3vh;
+    color: green;
+} .input-container-css a:hover {
+    color: rgb(101, 132, 105);
+}
+
+#otp {
+    width: 10vw;
+    margin-right: 20vw;
+    position: relative;
+    z-index: 4;
+} #otp-clicked {
+    width: 7vw;
+    border-radius: 0;
+    bottom: 6vh;
+    z-index: 1;
+    position: relative;
+    font-size: 18px;
+} #otp-clicked:hover {
+    cursor: pointer;
+    transform: translate(0, 2px);
+    color: rgb(184, 182, 182);
+}
+
+#submit-clicked {
+    width: 17vw;
+    border-radius: 30px;
+    padding: 10px 10px 10px 10px;
+    margin-left: 15vw;
+    margin-top: -2vh;
+    font-size: 25px;
+    background-color: rgb(103, 164, 13);
+} #submit-clicked:hover {
+    cursor: pointer;
+    transform: translate(0, 2px);
+    color: rgb(184, 182, 182);
+}
+
