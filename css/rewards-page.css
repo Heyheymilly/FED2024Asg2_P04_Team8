@@ -40,8 +40,9 @@ header {
     border-radius: 5px;
 }
 
-.user-coin-value
+.coin-value-container
 {
+    display: flex;
     border: 1px solid black;
     width: 150px;
     transform: translate(50px);
@@ -52,16 +53,18 @@ header {
     background-color:rgb(232, 0, 0);
 }
 
-.user-coin-value div{
-    transform: translate(80px, 15px);
+.coin-value-container div {
     color: white;
+    transform: translate(65px, 15px);
 }
 
-.user-coin-value img
+.coin-value-container img
 {
+    position: absolute;
+    width:55px;
+    height: 50px;
     border-radius: 10px;
-    border: 1px solid rgb(99, 87, 87);
-    transform: translate(0px, -20px);
+    border: 1px solid rgb(0, 0, 0);
 }
 
 .categories {
@@ -126,7 +129,7 @@ header {
     border-color: #ffa500; /* Highlighted circle border */
 }
 
-.claim-btn {
+#claim-btn {
     padding: 5px 10px;
     font-size: 12px;
     background-color: #007bff;
@@ -135,6 +138,17 @@ header {
     border-radius: 5px;
     cursor: pointer;
     border: 2px solid #0056b3; 
+}
+#claim-btn:active {
+    color: grey;
+}
+#claim-btn:hover {
+    transform: translate(0,1px);
+    cursor: pointer;
+}
+#claim-btn.clicked {
+    color: grey;
+    transform: translate(0,0);
 }
 
 .page-options {
@@ -165,7 +179,8 @@ header {
     background: black;
     width: 100px;
 }
-#skip-day:hover {
+#skip-day:active {
     cursor: pointer;
+    color: grey;
     transform: translate(0,1px);
 }

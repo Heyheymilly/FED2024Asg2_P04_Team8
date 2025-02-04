@@ -7,32 +7,44 @@
     <meta name="author" content="Your name here">
     <title>Your Page Title</title>
     <link rel="stylesheet" href="/css/login.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Jaro Font -->
+<link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@700&family=Akshar:wght@300..700&family=Alata&family=Jaro:opsz@6..72&family=Jersey+10&family=Jersey+25&family=Protest+Strike&family=Ropa+Sans:ital@0;1&family=Rubik+Doodle+Shadow&family=Tilt+Warp&display=swap" rel="stylesheet">
+<!-- Kumar Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@700&family=Akshar:wght@300..700&family=Alata&family=Jaro:opsz@6..72&family=Jersey+10&family=Jersey+25&family=Kumar+One&family=Protest+Strike&family=Ropa+Sans:ital@0;1&family=Rubik+Doodle+Shadow&family=Tilt+Warp&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header>
-        <img src="/media/MokeSellLogo.png" alt="MokeSell Logo" width="200" height="150">
-    </header>
-    <main>
-        <div class="form-container">
-            <form>
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email">
-    
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password">
-            </form>
-            <p>Forgot Password?</p>
+        <div class="shop-img-container-css">
+            <img src="/media/MokeSellLogo.png" alt="shop-logo" height="110" width="110">
+
+            <div class="header-text-css">
+                <h1 class="kumar-one-regular">MokeSell</h1>
+                <h4 class="jaro">We make shopping easier</h4>   
+                <div class="jaro"> Login </div>
+            </div>
         </div>
-        <div class="button-container">
-            <button class="login-btn">Login</button>
+    </header>
+
+    <main>
+        <div class="input-container-css">
+            <input type="text" id="username" placeholder="Email or Phone Number">
+            <input type="password" id="password" placeholder="Password">
         </div>
     </main>
-    <footer>
-        <p>&copy; 2025 Your Name or Company. All rights reserved.</p>
-    </footer>
-    <!-- Link to external JavaScript -->
-    <script src="script.js"></script>
+
+    <script src="/script/login.js"></script>
 </body>
+
+    <footer>
+        <center><p>&copy;  MokeSell. All rights reserved.</p></center>
+    </footer>
 
 <script src ="../script/login.js" type = "module"></script>
 </html>

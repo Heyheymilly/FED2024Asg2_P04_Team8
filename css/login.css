@@ -1,69 +1,78 @@
-/* Form Container */
-.form-container {
-    width: 300px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Fonts */
+
+.jaro {
+    font-family: "Jaro", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.kumar-one-regular {
+font-family: "Kumar One", serif;
+font-weight: 400;
+font-style: normal;
+}
+  
+/* Main Content */
+
+html, body {
+    background-color: #dcfac7;
+    height: 100%;
+    margin: 0;    
 }
 
-/* Labels */
-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #333;
+body {
+    display: flex;
+    flex-direction: column;
 }
 
-/* Input Fields */
-form input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
-    color: #333;
+main {
+    flex: 1;
 }
 
-form input:focus {
-    border-color: #007bff; /* Highlight border on focus */
-    outline: none; /* Remove default focus outline */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add subtle shadow */
-}
 
-/* Placeholder Text */
-form input::placeholder {
-    color: #aaa;
-    font-size: 14px;
-}
+/* MokeSell logo */
+.shop-img-container-css
+{    
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    border: 1px solid red;
+} 
 
-/* Button Container */
-.button-container {
-    text-align: center;
-}
+.header-text-css {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    border: 1px solid red;
+    align-items: center;
+} .header-text-css h1 {
+    font-size: 40px;
+} .header-text-css h4 {
+    margin: -5vh 0 0 0; 
+} .header-text-css div{
+    margin-top: 10vh;
+    font-size: 40px;
+    position: relative;
+    right: 5vw;
+} 
 
-/* Login Button */
-.login-btn {
-    background-color: #007bff; /* Blue background */
-    color: white; /* White text */
-    border: none; /* No border */
-    border-radius: 25px; /* Rounded corners */
-    padding: 12px 24px; /* Spacing inside the button */
-    font-size: 16px; /* Font size */
-    font-weight: bold; /* Bold text */
-    cursor: pointer; /* Pointer cursor on hover */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for hover */
-}
-
-/* Hover Effect */
-.login-btn:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-    transform: translateY(-2px); /* Slight "lift" effect */
-}
-
-/* Active Effect */
-.login-btn:active {
-    transform: translateY(1px); /* Slight press effect */
+.input-container-css {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35vh;
+    flex-direction: column;
+    border: 1px solid red;
+    row-gap: 5vh;
+} .input-container-css input {
+    border-radius: 5px;
+    height: 7vh;
+    width: 25vw;
+    border: 2px solid rgb(51, 95, 47);
+    font-size: 20px;
+    padding: 0 0 0 30px;
 }
