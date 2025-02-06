@@ -11,31 +11,61 @@
 
     <!-- Firebase Realtime Database -->
     <script type="module" src="https://www.gstatic.com/firebasejs/11.2.0/firebase-database.js"></script>
+
+     <!-- Kumar One Font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@700&family=Akshar:wght@300..700&family=Alata&family=Jaro:opsz@6..72&family=Jersey+10&family=Jersey+25&family=Kumar+One&family=Protest+Strike&family=Ropa+Sans:ital@0;1&family=Rubik+Doodle+Shadow&family=Tilt+Warp&display=swap" rel="stylesheet">
+
+     <!-- Jaro Font -->
+     <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@700&family=Akshar:wght@300..700&family=Alata&family=Jaro:opsz@6..72&family=Jersey+10&family=Jersey+25&family=Protest+Strike&family=Ropa+Sans:ital@0;1&family=Rubik+Doodle+Shadow&family=Tilt+Warp&display=swap" rel="stylesheet">
+
+     <!-- Myanmar khway Font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@700&family=Akshar:wght@300..700&family=Alata&family=Jaro:opsz@6..72&family=Jersey+10&family=Jersey+25&family=Kumar+One&family=Noto+Sans+Myanmar:wght@100;200;300;400;500;600;700;800;900&family=Protest+Strike&family=Ropa+Sans:ital@0;1&family=Rubik+Doodle+Shadow&family=Tilt+Warp&display=swap" rel="stylesheet">
+
+     <!-- IBM Plex Mono -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@700&family=Akshar:wght@300..700&family=Alata&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Jaro:opsz@6..72&family=Jersey+10&family=Jersey+25&family=Kumar+One&family=Noto+Sans+Myanmar:wght@100;200;300;400;500;600;700;800;900&family=Protest+Strike&family=Ropa+Sans:ital@0;1&family=Rubik+Doodle+Shadow&family=Tilt+Warp&display=swap" rel="stylesheet">
+
+     <!-- Aoboshi One -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300..700&family=Alatsi&family=Alumni+Sans+Collegiate+One:ital@0;1&family=Aoboshi+One&family=Carlito:ital,wght@0,400;0,700;1,400;1,700&family=Gasoek+One&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Ropa+Sans:ital@0;1&family=Sintony:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
-    <header class="header">
-        <div class="logo">
-            <img src="../media/MokeSellLogo.png" alt="Logo">
-        </div>
-        <div class="shop-title">Shop Title</div>
-        <div class="search-bar">
-            <input type="text" placeholder="Search">
-        </div>
-        
-        <div class="coin-value-container">
-            <div id="coin-display">text</div>
-            <img src="../media/points.png" >
-        </div>
+    <header >
+        <div class="sub-navbar-css">
+            <img src="/media/MokeSellLogo.png" width="100" height="100" alt="MokeSell Logo">
 
-        <div class="profile-icon">
-            <img src="../media/profile.png" alt="Profile">
-            <div id="username"></div> <!-- Default text while loading -->
+            <div class="title-slogan-container-css">
+                <h1 class="kumar-one-regular">MokeSell</h1>
+                <h4 class="jaro">We make shopping easier</h4>
+            </div>
+
+            <input type="text" id="search-bar" class="noto-sans-myanmar-regular" placeholder="Search">
+
+
+            <button class="profile-button-css">
+                <img src="/media/profile.png" height="80" width="80" alt="Profile Picture">
+            </button>
         </div>
     </header>
 
     <main>
-    
+        <!-- Sticky navbar -->
+        <div class="main-navbar-css">
+            <ul class="kumar-one-regular">
+                <li><a href="/html/home-page.html">Home</a></li>
+                <li><a href="">Categories</a></li>
+                <li><a href="">Rewards</a></li>
+                <li><a href="">Contact us</a></li>
+            </ul>
+        </div>
 
         <!-- Link to your JavaScript file -->
         <script type="module" src="../script/Shopping-page.js"></script>

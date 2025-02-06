@@ -1,41 +1,146 @@
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Fonts */
+.ibm-plex-mono-regular {
+    font-family: "IBM Plex Mono", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.kumar-one-regular {
+    font-family: "Kumar One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.aoboshi-one-regular {
+    font-family: "Aoboshi One", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+.jaro {
+    font-family: "Jaro", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+  .noto-sans-myanmar-regular {
+    font-family: "Noto Sans Myanmar", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+      
+/* body html */
+
+html, body {
+    background-color: #dcfac7;
+    margin: 0; 
+    min-height: 150vh; 
 }
 
 body {
-    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
 }
 
-header {
+main {
+    flex: 1;
+}
+
+
+/* Header elements */
+
+
+.sub-navbar-css {
+    height: 20vh;
+    width: 100%;
+    background-color: rgba(4, 232, 19, 0.769);
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #f4f4f4;
-    border-bottom: 2px solid #ccc; /* Border at the bottom of the header */
+    
+} .sub-navbar-css img {
+    border-radius: 100px;
+    margin-left: 5vw;
+    border: 2px solid #2f673c;
 }
 
-.logo img, .profile-icon img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 2px solid #aaa; /* Border for logo and profile icon */
-}
-.profile-icon #username {
-    margin-left: 10px;
-}
-
-.shop-title {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.search-bar input {
-    padding: 5px 10px;
-    width: 200px;
-    border: 1px solid #ccc;
+#search-bar {
     border-radius: 5px;
+    border: 2px solid #2f673c;
+    height: 5vh;
+    width: 40vw;
+    margin-left: 6vw;
+    padding: 10px 0 5px 10px;
+    font-size: 25px;
+} #search-bar::placeholder {
+    font-size: inherit;
 }
+
+.profile-button-css {
+    padding: 0;
+    margin-left: 90px;
+    border: none;
+    background: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.profile-button-css img {
+    display: block;
+    width: 35%;
+    height: auto;
+}
+
+.title-slogan-container-css {
+    height: 17vh;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5vw;
+}  .title-slogan-container-css h1 { /* title */
+    font-size: 40px;
+    color: rgb(239, 239, 239);
+} .title-slogan-container-css h4 { /* slogan */
+    padding: 0;
+    margin-left: 2vw;
+    margin-top: -6vh;
+    color: rgb(21, 38, 26);
+}
+
+/* Main Navigation bar */
+.main-navbar-css {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: #2c5616;
+    border: 5px solid #a4ea7e;
+} .main-navbar-css ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+} .main-navbar-css ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+} .main-navbar-css ul li a:hover {
+    color: grey;
+} 
+
+.header {
+    min-height: 200vh;
+}
+
+/* Main content */
+
+
+
+footer {
+    height: 5.5vh;
+    border: 1px solid black;
+}
+
