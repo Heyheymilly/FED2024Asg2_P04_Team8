@@ -11,6 +11,13 @@
     font-style: normal;
 }
 
+.aoboshi-one-regular {
+    font-family: "Aoboshi One", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
 .jaro {
     font-family: "Jaro", serif;
     font-optical-sizing: auto;
@@ -56,26 +63,30 @@ main {
     border: 2px solid #2f673c;
 }
 
-.sub-navbar-css input {
+#search-bar {
     border-radius: 5px;
     border: 2px solid #2f673c;
     height: 5vh;
-    width: 40vw;
-    margin-left: 5vw;
+    width: 50vw;
+    margin-left: 6vw;
     padding: 10px 0 5px 10px;
     font-size: 25px;
-} .sub-navbar-css input::placeholder {
+} #search-bar::placeholder {
     font-size: inherit;
 }
 
-.profile-button {
+.profile-button-css {
+    padding: 0;
+    margin: 0;
     border: none;
-    width: 7vw;
+    background: none;
     display: inline-block;
     cursor: pointer;
 }
-.profile-button img {
+
+.profile-button-css img {
     display: block;
+    width: 35%;
     height: auto;
 }
 
@@ -97,12 +108,13 @@ main {
 /* Main content */
 
 .main-container-css {
-    height: 65vh;
+    height: 70vh;
     width: 70vw;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     margin-left: 15vw;
+    border: 1px solid red;
 }
 
 /* Container header */
@@ -124,28 +136,96 @@ main {
 
 .category-items-css, .page-options-items-css {
     width: calc(70vw - 5px);
-    height: 7vh;
+    height: 7.8vh;
     background-color: #27c14b;
     padding: 10px 5px 5px 5px;
     border: 2px solid #2f673c;
 }
 
-.category-items-css ul {
+#page-options {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: white;
+    font-size: 13px;
+    margin-top: 5vh;
+}
+
+#category {
     list-style-type: none;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding: 0;
     margin-top: 4vh;
     font-size: 13px;
-}
+    color: white;
+} #category li {
+    margin-right: 5vw;
+    margin-top: -5vh;
+    display: flex;
+    flex-direction: column;
+} #category li button {
+    border-radius: 100px;
+    height: 7vh;
+    background-color: #27c14b;
+    border: none;
+} #category li button img {
+    border-radius: 100px;
+    border: 1px solid green;
+}  #category li button img:hover {
+    border: 1px solid green;
+    cursor: pointer;
+    transform: translate(0, -1px);
+}  
 
 .rewards-items-css {
     width: calc(70vw - 5px);
-    height: 14.8vh;
+    height: 19vh;
     background-color: #27c14b;
     padding: 10px 5px 5px 5px;
     border: 2px solid #2f673c;
+} #days {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top:5px;
+    margin-top: -1vh;
+    font-size: 13px;
+    color: white;
+} #coins {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: -1vh;
+    font-size: 13px;
+    color: white;
+} #coins img {
+    border-radius: 60px;
+} #coins li {
+    display: inherit;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+ #claim-reward-clicked {
+    margin-left: 49%;
+    margin-top: -3vh;
+    border-radius: 10px;
+    border: 2px solid #2f673c;
+    width: 5vw;
+    height: 5vh;
+    background-color: #dcfac7;
+    color: black;
+} #claim-reward-clicked:hover {
+    background-color: #27c14b;
+    color: white;
+    cursor: pointer;
 }
 
 #sub-main-container-css {
@@ -153,8 +233,7 @@ main {
 }
 
 footer {
-    height: 8vh;
+    height: 5.5vh;
     border: 1px solid black;
 }
 
-  

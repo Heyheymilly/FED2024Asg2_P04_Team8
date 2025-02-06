@@ -32,7 +32,7 @@ loginButton.addEventListener("click", async (event) => {
         alert("Please fill in all fields.");
         return;
     }
-
+    
     try {
         // Attempt to sign in with Firebase Authentication
         const userCredential = await signInWithEmailAndPassword(auth, emailInput, passwordInput);
