@@ -142,16 +142,7 @@ main {
     border: 2px solid #2f673c;
 }
 
-#page-options {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    color: white;
-    font-size: 13px;
-    margin-top: 5vh;
-}
-
+/* Categories option container */
 #category {
     list-style-type: none;
     display: flex;
@@ -166,6 +157,8 @@ main {
     margin-top: -5vh;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 } #category li button {
     border-radius: 100px;
     height: 7vh;
@@ -173,13 +166,14 @@ main {
     border: none;
 } #category li button img {
     border-radius: 100px;
-    border: 1px solid green;
+    border: 1px solid rgb(14, 20, 14);
 }  #category li button img:hover {
     border: 1px solid green;
     cursor: pointer;
     transform: translate(0, -1px);
 }  
 
+/* Daily rewards container */
 .rewards-items-css {
     width: calc(70vw - 5px);
     height: 19vh;
@@ -212,7 +206,7 @@ main {
     align-items: center;
 }
 
-
+/* Claim reward button id for the Daily rewards container */
  #claim-reward-clicked {
     margin-left: 49%;
     margin-top: -3vh;
@@ -226,11 +220,46 @@ main {
     background-color: #27c14b;
     color: white;
     cursor: pointer;
+    transform: translate(0, 2px);
 }
 
+/* Sub main container, applies for everything e.g. catagories, Daily rewards etc */
 #sub-main-container-css {
     padding: 18px 0 0 0;
 }
+
+/* Page options */
+
+#page-options {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: white;
+    font-size: 13px;
+    margin-top: 4.7vh;
+} #page-options li {
+    margin-top: -6vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+} #page-options li button {
+    background-color: #27c14b;
+    border: none;
+} #page-options li button img {
+    border-radius: 100px;
+    border: 1px solid rgb(14, 20, 14);
+} #page-options li button img:hover {
+    border: 1px solid green;
+    cursor: pointer;
+    transform: translate(0, -1px);
+}
+
+#shop-options-clicked img, #Help-center-clicked img {
+    background-color: white;
+}
+
 
 footer {
     height: 5.5vh;
