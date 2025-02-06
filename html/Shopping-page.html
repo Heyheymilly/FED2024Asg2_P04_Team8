@@ -35,6 +35,19 @@
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300..700&family=Alatsi&family=Alumni+Sans+Collegiate+One:ital@0;1&family=Aoboshi+One&family=Carlito:ital,wght@0,400;0,700;1,400;1,700&family=Gasoek+One&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Ropa+Sans:ital@0;1&family=Sintony:wght@400;700&display=swap" rel="stylesheet">
 
+     <!-- Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@700&family=Akshar:wght@300..700&family=Alata&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jaro:opsz@6..72&family=Jersey+10&family=Jersey+25&family=Kumar+One&family=Noto+Sans+Myanmar:wght@100;200;300;400;500;600;700;800;900&family=Protest+Strike&family=Ropa+Sans:ital@0;1&family=Rubik+Doodle+Shadow&family=Tilt+Warp&display=swap" rel="stylesheet">
+
+    <!-- Roboto font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@700&family=Akshar:wght@300..700&family=Alata&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jaro:opsz@6..72&family=Jersey+10&family=Jersey+25&family=Kumar+One&family=Noto+Sans+Myanmar:wght@100;200;300;400;500;600;700;800;900&family=Protest+Strike&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ropa+Sans:ital@0;1&family=Rubik+Doodle+Shadow&family=Tilt+Warp&display=swap" rel="stylesheet">
+
+    <!-- Filter icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 </head>
 
 <body>
@@ -56,7 +69,7 @@
         </div>
     </header>
 
-    <main>
+    <main class="main-container-css">
         <!-- Sticky navbar -->
         <div class="main-navbar-css">
             <ul class="kumar-one-regular">
@@ -66,9 +79,82 @@
                 <li><a href="">Contact us</a></li>
             </ul>
         </div>
+        
+       
+        <div class="filter-tool-container-css">
+            <div>
+                <i class="fa fa-filter" style="font-size:48px;color:red"></i>
+                <h3 class="roboto">SEARCH FILTER</h3>
+                <h4 class="inter">Shop items related to <b id="search-input"></b></h4>
+            </div>  
+            
+            <!-- Pricing -->
+            <hr>
+            <h2 class="roboto">Pricing</h2>
+            <h4 class="roboto">
+                <input type="radio" id="pricing-htl-clicked" name="pricing"> <!-- highest to lowest (htl) -->
+                Highest to lowest
+            </h4>
+            <h4 class="roboto">
+                <input type="radio" id="pricing-lth-clicked" name="pricing"> <!-- Lowest to highest -->
+                Lowest to highest 
+            </h4>
+            
+            <!-- Popularity -->
+            <hr>
+            <h2 class="roboto">Popularity</h2>
+            
+            <h4 class="roboto">
+                <input type="radio" id="popularity-htl-clicked" name="popularity">
+                Highest to lowest
+            </h4>
+            <h4 class="roboto">
+                <input type="radio" id="populariy-lth-clicked" name="popularity">
+                Lowest to highest
+            </h4>
+         
+            <!-- Ratings -->
+            <hr>
+            <h2 class="roboto">Ratings</h2>
 
+            <h4 class="roboto">
+                <input type="radio" id="ratings-htl-clicked" name="ratings">
+                Highest to lowest
+            </h4>
+            <h4 class="roboto">
+                <input type="radio" id="ratings-lth-clicked" name="ratings">
+                Lowest to highest
+            </h4>
+
+            <button type="button" class="roboto" id="clear-clicked">Clear All</button>
+        </div>
+
+        <!-- items category -->
+        <div class="category-item-container1-css">
+            <div id="sports-shoes-container-css"><img src="/media/sports-shoes.png" height="180" width="200"></div>
+            <h4 class="roboto">Sports shoes</h4>
+            <div id="basketball-container-css"><img src="/media/basketball.png" height="180" width="200"></div>
+            <h4 class="roboto">Basketball</h4>
+        </div>
+
+        <div class="category-item-container2-css">
+            <div id="computer-setup"><img src="/media/computer-set.png" height="180" width="200"></div>
+            <h4 class="roboto" class="roboto">Computer gaming setup</h4>
+            <div id="kitchen-knife"><img src="/media/kitchen-knife.png" height="180" width="200"></div>
+            <h4 class="roboto">Kitchen knife</h4>
+        </div>
+
+        <div class="item-details-container-css">
+
+        </div>
+
+        
         <!-- Link to your JavaScript file -->
         <script type="module" src="../script/Shopping-page.js"></script>
     </main>
+
+    <footer>
+        <center><p>&copy;  MokeSell. All rights reserved.</p></center>
+    </footer>
 </body>
 </html>
