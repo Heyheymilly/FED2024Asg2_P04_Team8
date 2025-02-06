@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Rewards Page</title>
+    <link rel="stylesheet" href="../css/Shopping-page.css">
+
+    <!-- Firebase App (Core SDK) -->
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js"></script>
+
+    <!-- Firebase Realtime Database -->
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.2.0/firebase-database.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="../media/MokeSellLogo.png" alt="Logo">
+        </div>
+        <div class="shop-title">Shop Title</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+        </div>
+        
+        <div class="coin-value-container">
+            <div id="coin-display">text</div>
+            <img src="../media/points.png" >
+        </div>
+
+        <div class="profile-icon">
+            <img src="../media/profile.png" alt="Profile">
+            <div id="username"></div> <!-- Default text while loading -->
+        </div>
+    </header>
+
+    <main>
+    
+
+        <!-- Link to your JavaScript file -->
+        <script type="module" src="../script/Shopping-page.js"></script>
+    </main>
+</body>
+</html>
