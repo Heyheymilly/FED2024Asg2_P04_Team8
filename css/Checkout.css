@@ -243,8 +243,25 @@ main {
 }
 
 #pay-btn-css {
-    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
+#pay-btn-css button {
+    background: white;
+    padding: 5px 5px 5px 5px;
+    width: 5vw;
+    text-align: center;
+    align-content: center;
+    border: 1px solid black;
+    background: black;
+    color: white;
+    cursor: pointer;
+   
+}#pay-btn-css button:hover {
+    transform: translate(0,2px);
+}
+
 
 #voucher-btn-css {
     margin-top: 10px;
@@ -256,6 +273,7 @@ main {
     align-content: center;
     font-size: 15px;
     word-spacing: 5px;
+    cursor: pointer;
 }
 
 #fees-payable-container-css {
