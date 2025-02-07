@@ -1,0 +1,302 @@
+/* Fonts */
+.ibm-plex-mono-regular {
+    font-family: "IBM Plex Mono", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.kumar-one-regular {
+    font-family: "Kumar One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.aoboshi-one-regular {
+    font-family: "Aoboshi One", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+.jaro {
+    font-family: "Jaro", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+  .noto-sans-myanmar-regular {
+    font-family: "Noto Sans Myanmar", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.inter {
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: bolder;
+}
+      
+/* body html */
+
+html, body {
+    background-color: #dcfac7;
+    height: 100%;
+    margin: 0;    
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* Header elements */
+
+.sub-navbar-css {
+    height: 20vh;
+    width: 100vw;
+    background-color: rgba(4, 232, 19, 0.769);
+    display: flex;
+    border: 1px solid black;
+    align-items: center;
+}
+
+.profile-button-css img {
+    border-radius: 100px;
+    border: 2px solid #2f673c;
+}
+
+.sub-navbar-css h1 {
+    margin-left: -8vw;
+}
+
+#back-button-clicked {
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    border: none;
+    background: none;
+    margin-left: 35px;
+
+} #back-button-clicked:hover {
+    cursor: pointer;
+    transform: translate(0,2px);
+}
+
+#back-button-clicked img {
+    border-radius: 100px;
+    margin-left: -6.5px;
+}
+
+
+.profile-button-css {
+    padding: 0;
+    margin-left: 20vw;
+    border: none;
+    background: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.profile-button-css img {
+    display: block;
+    width: 35%;
+    height: auto;
+}
+
+.profile-details-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+/* Main Content */
+
+main center .inter {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.username-container-css, .password-container-css {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 10vw;
+    width: 90vw;
+    column-gap: 12px;
+} .username-container-css div, .password-container-css div {
+    background: greenyellow;
+    border: 2px solid black;
+    width: 21vw;    
+    height: 8vh;
+}
+.password-container-css {
+    position: relative;
+    bottom: 30vh;
+}
+
+#user-username, #user-password {
+    font-size: 30px;
+    text-align: center;
+}
+
+.password-container-css div {
+    margin-left: .5vw;
+}
+
+.membership-container-css {
+   width: 25vw;
+   margin-left: 74vw;
+   border: 2px solid black;
+   position: relative;
+   bottom: 90px;
+   padding: 0;
+   background: green;
+   z-index: 2;
+   margin-bottom: 0;
+} .membership-container-css hr {
+    border: 2px solid black;
+}
+ .membership-container-css h2 {
+    text-align: center;
+    margin: 0;
+    z-index: 3;
+    color: white;
+}
+
+.plans-container-css {
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+    justify-content: space-evenly;
+    margin-left: 2vw;
+    padding: 0;
+}
+
+#regular-plan, #premium-plan {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+} #regular-plan div {
+    background-color: white;
+    padding: 10px 10px 10px 10px;
+    font-size: 20px;
+    border-radius: 10px;
+} #regular-plan button, #premium-plan button {
+    width: 25%;
+    height: 60%;
+    cursor: pointer;
+    border: 3px solid grey
+} 
+
+#premium-plan div {
+    background-color: white;
+    padding: 8px 8px 8px 8px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+#change-username-clicked, #change-password-clicked {
+    cursor: pointer;       
+    margin-left: 10vw;
+    padding: 10px 40px 10px 40px;
+    font-size: 23px;
+    border-radius: 20px;
+    border: 1px solid blue;
+    background-color: green;
+    color: white;
+} #change-username-clicked:hover, #change-password-clicked:hover {
+    color: grey;
+    transform: translate(0, 2px);
+}
+
+.security-others-container-css {
+    position: relative;
+    bottom: 20vh;
+    height: 20vh;
+}
+
+.security-others-container-css h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    padding: 0;
+    margin-top: 2px;
+    margin-bottom: 5px;
+
+}
+
+.security-options-css {
+    display: flex;
+    flex-direction: column;
+}
+
+.security-options-css {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.two-factor-css, .faceID-css {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 1vw;
+} .two-factor-css, .faceID-css {
+    font-size: 13px;
+} .two-factor-css input, .faceID-css input {
+    width: 5vw;
+    height: 7vh;
+} .two-factor-css input:hover, .faceID-css input:hover {
+    cursor: pointer;
+}
+
+
+hr {
+    border: 2px solid grey;
+    margin: 0;
+    padding: 0;
+}
+
+.other-options-container-css {
+    background-color: greenyellow;
+    height: 21vh;
+    width: 50vw;
+    border: 2px solid green;
+    margin-left: 25vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#options-row1, #options-row2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+} #options-row1 a, #options-row2 a {
+    text-decoration: none;
+    font-size:15px;
+}
+
+#options-row1 {
+    margin-left:5%;         
+} 
+
+#options-row2 {
+    margin-left: 10%;
+}
+
+footer {
+    height: 5.5vh;
+    border: 1px solid black;
+}
+

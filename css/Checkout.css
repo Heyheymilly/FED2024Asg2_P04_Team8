@@ -1,0 +1,100 @@
+/* Fonts */
+.ibm-plex-mono-regular {
+    font-family: "IBM Plex Mono", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.kumar-one-regular {
+    font-family: "Kumar One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.aoboshi-one-regular {
+    font-family: "Aoboshi One", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+.jaro {
+    font-family: "Jaro", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+  .noto-sans-myanmar-regular {
+    font-family: "Noto Sans Myanmar", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.inter {
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: bolder;
+}
+      
+/* body html */
+
+html, body {
+    background-color: #dcfac7;
+    height: 100%;
+    margin: 0;    
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* Header elements */
+
+.sub-navbar-css {
+    height: 20vh;
+    width: 100vw;
+    background-color: rgba(4, 232, 19, 0.769);
+    display: flex;
+    border: 1px solid black;
+    align-items: center;
+}
+
+
+#back-button-clicked {
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    border: none;
+    background: none;
+    margin-left: 35px;
+
+} #back-button-clicked:hover {
+    cursor: pointer;
+    transform: translate(0,2px);
+}
+
+#back-button-clicked img {
+    border-radius: 100px;
+    margin-left: -6.5px;
+}
+
+.sub-navbar-css h1 {
+    margin-left: 50vw;
+}
+
+
+/* Main Content */
+
+footer {
+    height: 5.5vh;
+    border: 1px solid black;
+}
+
