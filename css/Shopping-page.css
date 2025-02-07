@@ -207,8 +207,11 @@ main {
     padding: 0;
     position: absolute;
     top: 36vh;
-} .category-item-container1-css div img {
+} .category-item-container1-css button img {
     border: 1px solid red;
+} .category-item-container1-css button {
+    border: none;
+    background: none;
 }
 
 .category-item-container2-css {
@@ -218,20 +221,146 @@ main {
     justify-content: space-between;
     padding: 0;
     margin-left: 49vw;
-    padding: 0;
     position: absolute;
     top: 36vh;
-} .category-item-container2-css div img {
+} .category-item-container2-css button img {
     border: 1px solid red;
+} .category-item-container2-css button {
+    border: none;
+    background: none;
 }
 
+#kitchen-knife {
+    border: 3px solid grey;
+}
+
+#selected-item-img-api {
+    display: flex;
+    height: 200px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    margin-left: 68vw;
+    position: absolute;
+    z-index: 3;
+    top: 30vh;
+    border:3px solid red ;
+}
+
+
 .item-details-container-css {
-    border: 1px solid black;
+    height: 54vh;
     width: 30vw;
-    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    text-align: center;
+    align-items:center;
+    padding: 0;
+    margin-left: 68vw;
+    position: absolute;
+    z-index: 2;
+    top: 62vh;
+    border: 2px solid red;
+    background-color: lightgreen;
+} .item-details-container-css h3 {
+    font-size: 28px;
+} .item-details-container-css h4 {
     position: relative;
-    left: 67vw;
-    bottom: 80vh;
+    bottom: 30px;
+    font-size: 15px;
+}
+
+.commentor-details-api {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    height: 100px;
+    position: relative;
+    bottom: 95px;
+    left: 50px;
+}
+#commentor-profile-clicked {
+    border: none;
+    background:none;
+} #commentor-profile-clicked img {
+    border: 2px solid grey;
+    background:none;
+    border-radius: 100px;
+    padding: 0;
+    position: relative;
+    bottom: 5px;
+} #commentor-profile-clicked h5 {
+    margin: 0;
+}
+
+#comment-box {
+    height: 6vh;
+    width: 21vw;
+    background-color: rgb(255, 254, 254);
+    color: rgb(20, 18, 18);
+    text-align: center;
+}
+
+.buy-cartadd-container-css {
+    display: flex;
+    align-items: center;
+    border: 1px solid red;
+    flex-direction: column;
+    width: 30vw;
+    margin-left: 55vw;
+} .buy-cartadd-container-css hr {
+    width: 30vw;
+    margin-left: 13vw;
+    position: relative;
+    top: -60px;
+    border: 2px solid red;
+    z-index: 5;
+} 
+
+#view-cart-clicked {
+    position: relative;
+    z-index: 5;
+    width: 15vw;
+    height: 7vh;
+    margin-left: 28vw;
+    bottom: 9vh;
+    font-size: 20px;
+}
+
+#cart-item-count-api {
+    height: 4vh;
+    width: 4vh;
+    border-radius: 100px;
+    position: relative;
+    background: black;
+    color: white;
+    text-align: center;
+    align-content: center;
+    border: 2px solid rgb(255, 0, 0);
+    bottom: 17.5vh;
+    z-index: 10;
+    margin-left: 43vw
+}
+
+#add-cart-clicked {
+    position: relative;
+    z-index: 5;
+    width: 7vw;
+    margin-left: 28vw;
+    bottom: 13.8vh;
+}
+
+#commentor-rating-box {
+    display: flex;
+    justify-content: space-around;
+    height: 4vh;
+    width: 10vw;
+    position: relative;
+    right: 10.1vw;
+    border: 1px solid black;
+    bottom: -44px;
+    background-color: white;
 
 }
 

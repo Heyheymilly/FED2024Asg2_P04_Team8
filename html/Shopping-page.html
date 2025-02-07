@@ -131,23 +131,49 @@
 
         <!-- items category -->
         <div class="category-item-container1-css">
-            <div id="sports-shoes-container-css"><img src="/media/sports-shoes.png" height="180" width="200"></div>
+            <button id="sports-shoes-container-css"><img src="/media/sports-shoes.png" height="180" width="200"></button>
             <h4 class="roboto">Sports shoes</h4>
-            <div id="basketball-container-css"><img src="/media/basketball.png" height="180" width="200"></div>
+            <button id="basketball-container-css"><img src="/media/basketball.png" height="180" width="200"></button>
             <h4 class="roboto">Basketball</h4>
         </div>
 
         <div class="category-item-container2-css">
-            <div id="computer-setup"><img src="/media/computer-set.png" height="180" width="200"></div>
+            <button id="computer-setup"><img src="/media/computer-set.png" height="180" width="200"></button>
             <h4 class="roboto" class="roboto">Computer gaming setup</h4>
-            <div id="kitchen-knife"><img src="/media/kitchen-knife.png" height="180" width="200"></div>
+            <button id="kitchen-knife"><img src="/media/kitchen-knife.png" height="180" width="200"></button>
             <h4 class="roboto">Kitchen knife</h4>
         </div>
 
-        <div class="item-details-container-css">
+        <div id="selected-item-img-api"><img src="/media/computer-set.png" width="380" height="200"></div>
 
+        <div class="item-details-container-css inter">
+            <h3>Item description and conditions</h3>
+            <h4>PC pro gaming setup comes with its own set of unique LED keyboard, its own processor <br> 
+                colored gaming mouse and keypad. 
+            </h4>
+            
+            <h4>Comments</h4>
+            <div class="commentor-details-api">
+                <button id="commentor-profile-clicked">
+                    <img src="/media/profile.png" height="50" width="50" alt="Profile Picture">
+                    <h5 class="inter">User1234</h5>
+                </button>
+                <input type="text" class="inter" id="comment-box" value="Great product!">
+                <div id="commentor-rating-box">
+                    &#127775
+                    &#127775
+                    &#127775
+                    &#127775
+                </div>
+            </div>
         </div>
 
+        <div class="buy-cartadd-container-css">
+            <hr>
+            <button type="button" class="inter" id="view-cart-clicked">View Cart</button>
+            <div id="cart-item-count-api">1</div>
+            <button type="button" class="inter" id="add-cart-clicked">Add to cart</button>
+        </div>
         
         <!-- Link to your JavaScript file -->
         <script type="module" src="../script/Shopping-page.js"></script>
