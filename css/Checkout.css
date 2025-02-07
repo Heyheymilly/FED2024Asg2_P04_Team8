@@ -87,11 +87,124 @@ main {
 }
 
 .sub-navbar-css h1 {
-    margin-left: 50vw;
+    margin-left: 35vw
 }
 
 
 /* Main Content */
+
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.item-delivery-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.delivery-info-container {
+    background: white;
+    height: 8vw;
+    width: 70vw;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-top: 10px ;
+    margin-left: 5vw;
+} .delivery-info-container span i {
+    margin-left: 30px;
+    padding: 10px;
+}
+
+#delivery-info-api {
+    font-size: 20px;
+}
+
+.item-column-css {
+    width: 60vw;
+    background-color: white;
+    height:17vw;
+    margin-left: 5vw;
+    margin-top: 5vh;
+    border-radius: 20px;
+    border: 1px solid black;
+} .item-column-css input[type='checkbox'] {
+    width:45px;
+    height:45px;
+    margin-top: -20px;
+    margin-left: -10px;
+    background:white;
+    border-radius:10px;
+    border:2px solid #555;
+}
+
+.col-desc-css {
+    display: flex;
+    flex-direction: column;
+}
+
+.name-image-css {
+    width: 55vw;
+    height: 4vw;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    margin-left: 5vw;
+}
+
+#item-image-api {
+    border-radius: 10px;
+    border: 1px solid black;
+} 
+
+#item-name-api {
+    margin-left: 25%;
+    font-size: 20px;
+}
+
+.voucher-css{
+    margin-left: 25%;
+    background-color: red;
+    width: 10vw;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.price-css {
+    color: black;     
+    text-align: center;
+    margin-right: 20vw;
+    margin-top: 2vh;
+    font-size: 14px;
+} .price-css hr {
+    width: 60vw;
+}
+
+#message-container-css{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#order-qty-css {
+    margin-left: 5%;
+    position: relative;
+    bottom: 4px;
+}
+
+.payment-container-css {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 2vw;
+} .payment-container-css h1 {
+    text-align: center;
+    
+}
+
 
 footer {
     height: 5.5vh;

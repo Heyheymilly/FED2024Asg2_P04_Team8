@@ -39,6 +39,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@700&family=Akshar:wght@300..700&family=Alata&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jaro:opsz@6..72&family=Jersey+10&family=Jersey+25&family=Kumar+One&family=Noto+Sans+Myanmar:wght@100;200;300;400;500;600;700;800;900&family=Protest+Strike&family=Ropa+Sans:ital@0;1&family=Rubik+Doodle+Shadow&family=Tilt+Warp&display=swap" rel="stylesheet">
 
+        <!-- Map marker icon -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
     <body>
@@ -51,7 +53,49 @@
         </header>   
         
         <main>
+       
+            <div class="main-container">
+                <div class="item-delivery-container">
+                    <div class="delivery-info-container">
+                        <span><i class="fa fa-map-marker" style="font-size:36px"></i></span>
+                        <span id="delivery-info-api" class="inter"></span>
+                    </div>
+                    
+                    <div class="item-column-css">
+                        <input type="checkbox">
 
+                        <div class="col-desc-css">
+                            <div class="name-image-css">
+                                <img src="/media/sports-shoes.png" width="100" height="100" id="item-image-api">
+                                <div id="item-name-api" class="inter"> Sports shoes</div>
+                            </div>
+                            
+                            <div class="voucher-css jaro">10% off</div>
+                            <div class="price-css inter">Price: $3.00
+                                <hr>
+                            </div>
+                            <div id="message-container-css">
+                                <button class="aoboshi-one-regular">Message for supplier</button>
+                            </div>
+
+                            <div><hr></div>
+
+                            <div class="aoboshi-one-regular" id="order-qty-css">Order Quantity</div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="payment-container-css">
+                    <h1>Accepted payment <br> methods</h1>
+                    <div id="payment-method-container-css">
+                        
+                    </div>
+                </div>
+
+            </div>
 
         </main>
     </body>
