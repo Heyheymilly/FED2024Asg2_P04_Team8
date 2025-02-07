@@ -107,7 +107,7 @@ main {
 .delivery-info-container {
     background: white;
     height: 8vw;
-    width: 70vw;
+    width: 60vw;
     border: 2px solid black;
     border-radius: 10px;
     margin-top: 10px ;
@@ -200,9 +200,71 @@ main {
     flex-direction: column;
     align-items: center;
     margin-left: 2vw;
+    background-color: lightgreen;
+    border: 2px solid black;
+    width: 40vw;
+    height: 70vh;
 } .payment-container-css h1 {
     text-align: center;
+    font-size: 21px;
+}
+
+#payment-method-container-css {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30vw;
+} #payment-method-container-css img {
+    background: white;
+    border-radius: 100px;
+    border: 2px solid black;
+    object-fit: contain;
+}
+
+.payment-container-css h5 {
+    font-size: 20px;
+    margin-top: 2px;
+}
+
+#card-info-container-css {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 30vw;
+    margin-top: -5vh;
+
+}  #card-info-container-css input {
+    padding: 7px 7px 7px 7px;
+    border-radius: 5px;
+    border: 2px solid black;
+} #card-info-container-css input[type='number'] {
+    width: 5vw;
+}
+
+#pay-btn-css {
     
+}
+
+#voucher-btn-css {
+    margin-top: 10px;
+    width: 30vw;
+    border-radius: 10px;
+    border: 2px solid black;
+    background-color: green;
+    color: white;
+    align-content: center;
+    font-size: 15px;
+    word-spacing: 5px;
+}
+
+#fees-payable-container-css {
+    width: 30vw;
+    border: 1px solid red;
+    font-size: 15px;
+}
+#fees-payable-container-css div {
+    padding: 5px;
 }
 
 
