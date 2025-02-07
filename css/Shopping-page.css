@@ -230,9 +230,7 @@ main {
     background: none;
 }
 
-#kitchen-knife {
-    border: 3px solid grey;
-}
+
 
 #selected-item-img-api {
     display: flex;
@@ -361,6 +359,12 @@ main {
     bottom: -44px;
     background-color: white;
 
+}
+
+button {
+    cursor: pointer;
+} button:hover {
+    transform: translate(0,2px);
 }
 
 .name-price-css {
