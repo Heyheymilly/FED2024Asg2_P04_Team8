@@ -102,35 +102,83 @@ document.addEventListener("click", async function(event) {
     }
 });
 
+// Add to Cart
+const listingID = "8Ih0eoCr3DfTpiMI9TgU";
+
+function getProductName(itemID) {
+    const productNames = {
+        "sports-shoes-container-api": "Sports Shoes",
+        "basketball-api": "Basketball",
+        "computer-setup-api": "Computer Setup",
+        "kitchen-knife-api": "Kitchen Knife"
+    };
+    return productNames[itemID] || "Unknown Product"; // Default value
+}
+
+function getProductPrice(itemID) {
+    const productPrices = {
+        "sports-shoes-container-api": 69,
+        "basketball-api": 40,
+        "computer-setup-api": 1200,
+        "kitchen-knife-api": 25
+    };
+    return productPrices[itemID] || 0;
+
+
+let lastSelectedProductID = "";
+
+document.addEventListener("click", function(event) {
+    const clickedButton = event.target.closest("button");
+
+    if (clickedButton && clickedButton.id !== "add-cart-clicked") { 
+        lastSelectedProductID = clickedButton.id.trim().toLowerCase(); 
+        console.log(`User selected product: ${lastSelectedProductID}`);
+    }
+});
+
+
 async function AddToCart() {
-    if(!clickedButtonID) {
-        alert("Please select item before adding to cart");
+
+    if (!lastSelectedProductID) {
+        console.error("No product selected before adding to cart.");
         return;
     }
 
-    const docRef = doc(db, "listing", "8Ih0eoCr3DfTpiMI9TgU")
 
-    const docSnap = await getDoc(docRef);
+    console.log(`Adding to cart: ${lastSelectedProductID}`);
 
-   const listingRef = doc(db, "listing", "8Ih0eoCr3DfTpiMI9TgU");
-   let currentItems = {};
+    const cartRef = doc(db, "listing", listingID);
 
-   if(docSnap.exists()) {
-        currentItems = docSnap.data().ItemsAdded || {};
-   }
+    try {
+        const cartSnap = await getDoc(cartRef);
+        let cartData = cartSnap.exists() ? cartSnap.data() : {};
 
-   if (currentItems[clickedButtonID]) {
-        currentItems[clickedButtonID] += 1;
-    } else {
-        currentItems[clickedButtonID] = 1; 
+        if (!cartData.ItemsAdded) {
+            cartData.ItemsAdded = [];
+        }
+
+        let itemIndex = cartData.ItemsAdded.findIndex(item => item.id === lastSelectedProductID);
+
+        if (itemIndex !== -1) {
+            cartData.ItemsAdded[itemIndex].quantity += 1;
+        } else {
+            cartData.ItemsAdded.push({
+                id: lastSelectedProductID,
+                name: getProductName(lastSelectedProductID),
+                price: getProductPrice(lastSelectedProductID),
+                quantity: 1
+            });
+        }
+
+        await setDoc(cartRef, { ItemsAdded: cartData.ItemsAdded }, { merge: true });
+
+        console.log("Item successfully added to cart.");
+
+        lastSelectedProductID = "";
+    } catch (error) {
+        console.error("Error adding to cart:", error);
     }
-
-   currentItems[clickedButtonID] = productImages[clickedButtonID];
-
-   await setDoc(docRef, {ItemsAdded : currentItems}, { merge:true });
-
 }
 
+
 document.getElementById("add-cart-clicked").addEventListener('click', AddToCart);
-
-

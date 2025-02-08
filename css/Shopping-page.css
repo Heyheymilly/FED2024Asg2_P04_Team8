@@ -152,11 +152,16 @@ main {
 
 /* Main content */
 
+.filter-tool-container-css {
+    margin-left: 20px;
+}
+
 .filter-tool-container-css div  {
     display: flex;
     align-items: center;
     flex-direction: row;
     padding: 10px;
+    margin-left: 20px;
 } .filter-tool-container-css div h4 {
     margin-top: -10px;
     margin-left: 60px;
