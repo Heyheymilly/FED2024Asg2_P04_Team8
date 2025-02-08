@@ -40,8 +40,7 @@ header {
     border-radius: 5px;
 }
 
-.coin-value-container
-{
+.coin-value-container {
     display: flex;
     border: 1px solid black;
     width: 150px;
@@ -50,7 +49,7 @@ header {
     left: 50px;
     height: 50px;
     border-radius: 10px;
-    background-color:rgb(232, 0, 0);
+    background-color: rgb(232, 0, 0);
 }
 
 .coin-value-container div {
@@ -58,10 +57,9 @@ header {
     transform: translate(65px, 15px);
 }
 
-.coin-value-container img
-{
+.coin-value-container img {
     position: absolute;
-    width:55px;
+    width: 55px;
     height: 50px;
     border-radius: 10px;
     border: 1px solid rgb(0, 0, 0);
@@ -92,7 +90,7 @@ header {
     font-size: 14px;
     font-weight: bold;
     text-transform: capitalize;
-    border: 2px solid #aaa; 
+    border: 2px solid #aaa;
 }
 
 .daily-rewards {
@@ -117,6 +115,27 @@ header {
     padding: 10px;
 }
 
+/* 🟡 Fix: Make sure the entire reward box highlights properly */
+.reward.active {
+    background-color: yellow !important; /* 🟡 Highlights the active reward */
+    border-color: #ffa500 !important; /* Gold border */
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+/* 🟡 Highlight the Circle Inside the Active Reward */
+.reward.active .circle {
+    background-color: #ffcc00 !important; /* Gold circle */
+    border-color: #ffa500 !important; /* Orange border */
+    color: black;
+    font-weight: bold;
+}
+
+/* 🟡 Fix: Make sure inactive rewards have a normal color */
+.reward:not(.active) {
+    background-color: white; /* Reset inactive rewards to white */
+    border-color: #aaa;
+}
+
 .reward .circle {
     width: 50px;
     height: 50px;
@@ -124,12 +143,15 @@ header {
     border: 2px solid #aaa; /* Add border to the daily reward circles */
 }
 
+/* 🟡 Ensure .active is correctly applied */
 .reward .circle.active {
     background-color: #ff0;
     border-color: #ffa500; /* Highlighted circle border */
 }
 
-#claim-btn {
+/* Claim Button */
+.claim-btn {
+    display: none;
     padding: 5px 10px;
     font-size: 12px;
     background-color: #007bff;
@@ -137,18 +159,21 @@ header {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    border: 2px solid #0056b3; 
+    border: 2px solid #0056b3;
 }
-#claim-btn:active {
+
+.claim-btn:active {
     color: grey;
 }
-#claim-btn:hover {
-    transform: translate(0,1px);
+
+.claim-btn:hover {
+    transform: translate(0, 1px);
     cursor: pointer;
 }
-#claim-btn.clicked {
+
+.claim-btn.clicked {
     color: grey;
-    transform: translate(0,0);
+    transform: translate(0, 0);
 }
 
 .page-options {
@@ -157,7 +182,7 @@ header {
     gap: 150px;
     margin: 20px 0;
     padding: 10px;
-    border: 2px solid #ccc; 
+    border: 2px solid #ccc;
     border-radius: 10px;
 }
 
@@ -179,8 +204,9 @@ header {
     background: black;
     width: 100px;
 }
+
 #skip-day:active {
     cursor: pointer;
     color: grey;
-    transform: translate(0,1px);
+    transform: translate(0, 1px);
 }
