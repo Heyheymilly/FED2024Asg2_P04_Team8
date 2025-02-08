@@ -25,6 +25,8 @@ const db = getFirestore(app);
 
 const productIDs = ['sports-shoes-container-api', 'basketball-api', 'computer-setup-api', 'kitchen-knife-api'];
 
+
+const userID = 'IARIMHcZUjMSHMFNDzXC2mzY98l2';
 var clickedButtonID = "";
 
 const productImages = {
@@ -124,6 +126,7 @@ function getProductPrice(itemID) {
     };
     return productPrices[itemID] || 0;
 
+}
 
 let lastSelectedProductID = "";
 
@@ -136,6 +139,30 @@ document.addEventListener("click", function(event) {
     }
 });
 
+
+async function updateCartCount() {
+    const cartRef = doc(db, "listing", listingID);
+
+    try {
+        const cartSnap = await getDoc(cartRef);
+        if (cartSnap.exists()) {
+            const cartData = cartSnap.data();
+            
+            if (cartData.ItemsAdded && cartData.ItemsAdded.length > 0) {
+                const totalQuantity = cartData.ItemsAdded.reduce((sum, item) => sum + (item.quantity || 0), 0);
+                
+                document.getElementById("cart-item-count-api").textContent = totalQuantity;
+                console.log("Cart total quantity updated:", totalQuantity);
+            } else {
+                document.getElementById("cart-item-count-api").textContent = "0";
+            }
+        } else {
+            document.getElementById("cart-item-count-api").textContent = "0";
+        }
+    } catch (error) {
+        console.error("Error fetching cart count:", error);
+    }
+}
 
 async function AddToCart() {
 
@@ -174,7 +201,12 @@ async function AddToCart() {
 
         console.log("Item successfully added to cart.");
 
+        document.getElementById("cart-item-count-api").value = 
+
+        updateCartCount();
+
         lastSelectedProductID = "";
+
     } catch (error) {
         console.error("Error adding to cart:", error);
     }
@@ -182,3 +214,5 @@ async function AddToCart() {
 
 
 document.getElementById("add-cart-clicked").addEventListener('click', AddToCart);
+document.addEventListener("DOMContentLoaded", updateCartCount);
+
