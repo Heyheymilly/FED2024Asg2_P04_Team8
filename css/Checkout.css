@@ -50,6 +50,7 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 main {
@@ -119,13 +120,27 @@ main {
 
 #delivery-info-api {
     font-size: 20px;
+    margin: 20px;
 }
-
+.item-container {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid green;
+    overflow-x: auto;
+    align-items: center;
+    justify-content: space-around;
+    height: 51vh;
+    width: 65vw;
+    margin-top: 10px;
+    margin-left: 5px;
+    background-color: lightgreen;
+}
 .item-column-css {
     width: 60vw;
     background-color: white;
-    height:17vw;
-    margin-left: 5vw;
+    height: 37vh;
+    margin-left: 3vw;
+    margin-right: 3vw;
     margin-top: 5vh;
     border-radius: 20px;
     border: 1px solid black;
@@ -144,10 +159,19 @@ main {
     flex-direction: column;
 }
 
+#quantity-detail {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+} 
+
+#quantity-count-api {
+    margin-right: 2vw;
+}
+
 .name-image-css {
     width: 55vw;
     height: 4vw;
-    border: 1px solid red;
     display: flex;
     flex-direction: row;
     margin-left: 5vw;
@@ -156,7 +180,10 @@ main {
 #item-image-api {
     border-radius: 10px;
     border: 1px solid black;
+    text-align: center;
+    align-content: center;
 } 
+
 
 #item-name-api {
     margin-left: 25%;
@@ -189,7 +216,7 @@ main {
     justify-content: center;
 }
 
-#order-qty-css {
+#quantity-detail {
     margin-left: 5%;
     position: relative;
     bottom: 4px;

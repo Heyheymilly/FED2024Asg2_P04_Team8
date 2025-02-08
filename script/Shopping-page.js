@@ -26,7 +26,6 @@ const db = getFirestore(app);
 const productIDs = ['sports-shoes-container-api', 'basketball-api', 'computer-setup-api', 'kitchen-knife-api'];
 
 
-const userID = 'IARIMHcZUjMSHMFNDzXC2mzY98l2';
 var clickedButtonID = "";
 
 const productImages = {
