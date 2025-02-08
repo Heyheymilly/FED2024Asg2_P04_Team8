@@ -1,35 +1,55 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #e8f5e9; /* Light Green Background */
+    color: #1b5e20; /* Dark Green Text */
 }
 
 .container {
     padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    background-color: #ffffff; /* White Background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(27, 94, 32, 0.2); /* Soft Green Shadow */
 }
 
+/* Heading Styles */
 h1 {
     text-align: center;
     font-size: 1.8rem;
     margin-bottom: 20px;
+    color: #388e3c; /* Deep Green */
 }
 
+/* Section Styling */
 .section {
     margin: 20px 0;
+    padding: 15px;
+    background-color: #f1f8e9; /* Light Green Section Background */
+    border-left: 5px solid #2e7d32; /* Dark Green Side Accent */
+    border-radius: 5px;
 }
 
 .section-title {
     font-weight: bold;
     margin-bottom: 10px;
+    color: #2e7d32; /* Slightly Darker Green */
 }
 
+/* Box Styling */
 .profile-info, .membership, .security {
-    border: 1px solid #ccc;
+    border: 1px solid #a5d6a7; /* Soft Green Border */
+    background-color: #ffffff; /* White Background */
     padding: 15px;
     border-radius: 5px;
     margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(76, 175, 80, 0.1); /* Soft Green Shadow */
 }
 
+/* Input Group Styling */
 .input-group {
     margin-bottom: 10px;
 }
@@ -37,10 +57,70 @@ h1 {
 .input-group label {
     display: block;
     margin-bottom: 5px;
+    font-weight: bold;
+    color: #2e7d32; /* Dark Green */
 }
 
-.input-group input, .input-group button {
+.input-group input {
+    width: 60%; /* Adjusted width to 60% of the container */
+    max-width: 300px; /* Limits maximum width */
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #a5d6a7; /* Green Border */
+    border-radius: 5px;
+    background-color: #ffffff;
+    transition: border 0.3s ease-in-out;
+}
+
+.input-group input:focus {
+    border: 1px solid #1b5e20; /* Dark Green Focus */
+    outline: none;
+}
+
+/* Button Styling */
+.input-group button {
     width: 100%;
     padding: 10px;
     margin: 5px 0;
+    background-color: #388e3c; /* Green Button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.input-group button:hover {
+    background-color: #2e7d32; /* Darker Green on Hover */
+}
+
+/* Adjust the width of Change Username & Change Password buttons */
+#update-username, #update-password {
+    width: 120px; /* Set a fixed width */
+    padding: 10px;
+    margin-left: 10px; /* Add some space between input and button */
+    background-color: #388e3c; /* Green Button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+#update-username:hover, #update-password:hover {
+    background-color: #2e7d32; /* Darker Green on Hover */
+}
+
+/* Make sure input and button are aligned properly */
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between input field and button */
+}
+
+/* Adjust the input width to balance with the button */
+.input-group input {
+    width: 55%; /* Reduce input width to make space for button */
+    max-width: 270px; /* Keep a limit on width */
 }
