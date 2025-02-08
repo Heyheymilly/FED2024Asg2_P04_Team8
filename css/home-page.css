@@ -77,12 +77,12 @@ main {
 
 #coin-count-container {
     height: 5vh;
-    width: 10vw;
+    width: 12vw;
     display: flex;
-    justify-content:baseline;
-    padding-right: 10px;
+    justify-content: center;
+    border: 1px solid red;
     flex-direction: row;
-    margin-bottom: 15px;
+    margin-bottom: 1.5vw;
 } #coin-count-container div {
     background-color: rgb(247, 76, 19);
     display: flex;
@@ -106,7 +106,7 @@ main {
 
 .profile-button-css {
     padding: 0;
-    margin-left: 90px;
+    margin-left: 12vh;
     border: none;
     background: none;
     display: inline-block;
@@ -137,7 +137,7 @@ main {
 /* Main content */
 
 .main-container-css {
-    height: 70vh;
+    height: 74vh;
     width: 70vw;
     display: flex;
     flex-direction: column;
@@ -165,7 +165,7 @@ main {
 
 .category-items-css, .page-options-items-css {
     width: calc(70vw - 5px);
-    height: 7.8vh;
+    height: 9vh;
     background-color: #27c14b;
     padding: 10px 5px 5px 5px;
     border: 2px solid #2f673c;
@@ -205,10 +205,14 @@ main {
 /* Daily rewards container */
 .rewards-items-css {
     width: calc(70vw - 5px);
-    height: 19vh;
     background-color: #27c14b;
-    padding: 10px 5px 5px 5px;
+    height: 19vh;
     border: 2px solid #2f673c;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 5px 5px 5px;
+    row-gap: 5px;
+    justify-content: space-evenly;
 } #days {
     list-style: none;
     display: flex;
@@ -224,7 +228,7 @@ main {
     flex-direction: row;
     justify-content: space-evenly;
     margin-top: -1vh;
-    font-size: 13px;
+    font-size: 100%;
     color: white;
 } #coins img {
     border-radius: 60px;
@@ -237,12 +241,12 @@ main {
 
 /* Claim reward button id for the Daily rewards container */
  #claim-reward-clicked {
-    margin-left: 49%;
+    margin-left: 32vw;
     margin-top: -3vh;
     border-radius: 10px;
     border: 2px solid #2f673c;
-    width: 5vw;
-    height: 5vh;
+    width: 6vw;
+    height: 4.5vh;
     background-color: #dcfac7;
     color: black;
 } #claim-reward-clicked:hover {
@@ -254,7 +258,7 @@ main {
 
 /* Sub main container, applies for everything e.g. catagories, Daily rewards etc */
 #sub-main-container-css {
-    padding: 18px 0 0 0;
+    padding: 16px 0 0 0;
 }
 
 /* Page options */
@@ -285,13 +289,13 @@ main {
     transform: translate(0, -1px);
 }
 
-#shop-options-clicked img, #Help-center-clicked img {
+#shop-option-clicked img, #Help-center-clicked img {
     background-color: white;
 }
 
 
 footer {
-    height: 5.5vh;
+    height: 5vh;
     border: 1px solid black;
 }
 

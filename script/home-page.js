@@ -88,5 +88,20 @@ function updateClaimButtonUI() {
     }
 }
 
+document.querySelectorAll("#category li button").forEach(button => {
+    button.addEventListener("click", () => {
+        window.location.href = "/html/Shopping-page.html";
+    })
+});
+
+document.getElementById('shop-option-clicked').addEventListener('click', function(){
+    window.location.href = "/html/Shopping-page.html";
+});
+
+
+document.getElementById('checkout-option-clicked').addEventListener('click', function(){
+    window.location.href = "/html/Checkout.html";
+});
+
 // **🔥 Run Script on Page Load**
 fetchUserData();

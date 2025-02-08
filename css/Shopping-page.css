@@ -243,7 +243,8 @@ main {
     z-index: 3;
     top: 30vh;
     border:3px solid red ;
-}
+    background-color: rgb(49, 123, 70);
+} 
 
 
 .item-details-container-css {

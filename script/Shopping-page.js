@@ -2,7 +2,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.3.0/firebase-analytics.js";
-import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/11.3.0/firebase-firestore.js";
+import { getFirestore, updateDoc, getDoc, setDoc, doc } from "https://www.gstatic.com/firebasejs/11.3.0/firebase-firestore.js";
     // TODO: Add SDKs for Firebase products that you want to use
     // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -25,7 +25,14 @@ const db = getFirestore(app);
 
 const productIDs = ['sports-shoes-container-api', 'basketball-api', 'computer-setup-api', 'kitchen-knife-api'];
 
+var clickedButtonID = "";
 
+const productImages = {
+    "sports-shoes-container-api": "/media/sports-shoes.png",
+    "basketball-api": "/media/basketball.png",
+    "computer-setup-api": "/media/computer-set.png",
+    "kitchen-knife-api": "/media/kitchen-knife.png"
+};
 
 document.getElementById('clear-clicked').addEventListener('click', function() {
     const radioButtons = document.querySelectorAll('input[type="radio"]');
@@ -40,8 +47,6 @@ document.getElementById("view-cart-clicked").addEventListener('click', function(
 });
 
 
-
-
 document.addEventListener("click", async function(event) {
     if (event.target.closest("button")) { 
         const clickedButton = event.target.closest("button"); 
@@ -49,7 +54,7 @@ document.addEventListener("click", async function(event) {
         document.querySelectorAll("button").forEach(btn => btn.style.border = "");
     
         clickedButton.style.border = "2px solid grey";
-        const clickedButtonID = clickedButton.id;
+        clickedButtonID = clickedButton.id;
         console.log(`User clicked on: ${clickedButtonID}`);
 
         try {
@@ -63,3 +68,69 @@ document.addEventListener("click", async function(event) {
         }
     }
 });
+
+
+async function updateSelectedImage(clickedButtonID) {
+    const selectedImageElement = document.querySelector("#selected-item-img-api img");
+    
+    if (selectedImageElement && productImages[clickedButtonID]) {
+        selectedImageElement.src = productImages[clickedButtonID];
+        console.log(`Image updated to: ${productImages[clickedButtonID]}`);
+
+        // Save selected product in Firestore
+        try {
+            await setDoc(doc(db, "selectedItems", "userSelection"), {
+                selectedProduct: clickedButtonID
+            }, { merge: true });
+
+            console.log(`Firestore updated: ${clickedButtonID} selected`);
+        } catch (error) {
+            console.error("Error updating Firestore:", error);
+        }
+    }
+}
+
+// Event Listener for Clicks on Product Buttons
+document.addEventListener("click", async function(event) {
+    if (event.target.closest("button")) { 
+        const clickedButton = event.target.closest("button"); 
+        clickedButtonID = clickedButton.id;
+
+        if (productImages[clickedButtonID]) {
+            updateSelectedImage(clickedButtonID);
+        }
+    }
+});
+
+async function AddToCart() {
+    if(!clickedButtonID) {
+        alert("Please select item before adding to cart");
+        return;
+    }
+
+    const docRef = doc(db, "listing", "8Ih0eoCr3DfTpiMI9TgU")
+
+    const docSnap = await getDoc(docRef);
+
+   const listingRef = doc(db, "listing", "8Ih0eoCr3DfTpiMI9TgU");
+   let currentItems = {};
+
+   if(docSnap.exists()) {
+        currentItems = docSnap.data().ItemsAdded || {};
+   }
+
+   if (currentItems[clickedButtonID]) {
+        currentItems[clickedButtonID] += 1;
+    } else {
+        currentItems[clickedButtonID] = 1; 
+    }
+
+   currentItems[clickedButtonID] = productImages[clickedButtonID];
+
+   await setDoc(docRef, {ItemsAdded : currentItems}, { merge:true });
+
+}
+
+document.getElementById("add-cart-clicked").addEventListener('click', AddToCart);
+
+
