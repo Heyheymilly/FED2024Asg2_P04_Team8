@@ -84,7 +84,7 @@ async function retrieveCartItem() {
                             itemDiv.classList.add("item-column-css");
 
                             itemDiv.innerHTML =` 
-                                <input type="checkbox">
+                                <input type="checkbox" class="item-checkbox-api">
                                 <div class="col-desc-css">
                                     <div class="name-image-css">
                                         <img src="${itemImgLinkDict[item.id]}" width="100" height="100" alt="${item.name}">
@@ -92,7 +92,7 @@ async function retrieveCartItem() {
                                     </div>
                                     
                                     <div class="voucher-css jaro">10% off</div>
-                                    <div class="price-css inter">Price: $${item.price.toFixed(2)}
+                                    <div class="price-css inter" data-price="${item.price}">Price: $${item.price.toFixed(2)}
                                         <hr>
                                     </div>
                                     <div id="message-container-css">
@@ -103,7 +103,7 @@ async function retrieveCartItem() {
 
                                     <div class="aoboshi-one-regular" id="quantity-detail">
                                         <div class="inter">Order Quantity</div> 
-                                        <div class="inter" id="quantity-count-api">${item.quantity}</div>
+                                        <div class="inter order-quantity-api" id="quantity-count-api">${item.quantity}</div>
                                     </div>
                                 </div>
                             </div>`; // item to add inside the item-column-container
@@ -113,6 +113,10 @@ async function retrieveCartItem() {
                     });
 
                     console.log("Cart item is successfully added!");
+
+
+                    document.querySelector("item-column-css input")
+
                 } else {
                     document.getElementById("item-column-container-api").style.display= "none";
                     return;
@@ -126,3 +130,39 @@ async function retrieveCartItem() {
 }
 
 document.addEventListener("DOMContentLoaded", retrieveCartItem);
+
+
+
+function updateTotalPrice() {
+
+    const shippingCostPerItem = 5;
+    let totalMerchandise = 0;
+    let totalShippingPrice = 0;
+    
+    const check_checkbox = document.querySelectorAll(".item-checkbox-api");
+
+    check_checkbox.forEach(checkBox => {
+        if(checkBox.checked) {
+            const itemDiv = checkBox.closest(".item-column-css");
+
+            const price = parseFloat(itemDiv.querySelector(".price-css").dataset.price);
+            const quantity = parseInt(itemDiv.querySelector(".order-quantity-api").textContent);
+
+            totalMerchandise += price * quantity;
+            totalShippingPrice += shippingCostPerItem * quantity;
+        }
+    });
+
+    let totalPayment = totalMerchandise + totalShippingPrice;
+
+    document.getElementById("merchandise-subtotal-api").textContent =  `$${totalMerchandise}`;
+    document.getElementById("shipping-subtotal-api").textContent = `$${totalShippingPrice}`;
+    document.getElementById("total-payment-api").textContent = `$${totalPayment}`;
+}
+
+
+document.addEventListener("change", function(event){
+    if(event.target.classList.contains("item-checkbox-api")) {
+        updateTotalPrice();
+    }
+});

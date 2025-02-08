@@ -308,8 +308,13 @@ main {
     border: 1px solid red;
     font-size: 15px;
 }
-#fees-payable-container-css div {
+#fees-payable-container-css div .inter {
     padding: 5px;
+}
+
+.total-container-css,.shipping-container-css, .merchandise-container-css  {
+    display: flex;
+    justify-content: space-between;
 }
 
 
