@@ -25,24 +25,40 @@ function getTodayDate() {
     return new Date().toISOString().split("T")[0]; // Returns 'YYYY-MM-DD'
 }
 
-// Function to highlight the correct day's box and move the claim button
-function highlightStreakDay(streakCount) {
+// Function to highlight the correct day's box and update claim buttons
+function highlightStreakDay(streakCount, lastClaimedDate) {
     const rewardBoxes = document.querySelectorAll(".rewards-grid .reward");
+    let today = getTodayDate();
 
-    // Remove "active" class from all days and hide all claim buttons
     rewardBoxes.forEach((reward, index) => {
         reward.classList.remove("active");  
         const button = reward.querySelector(".claim-btn");
-        if (button) button.style.display = "none"; 
+        if (button) {
+            button.style.display = "none"; 
+            button.textContent = "Claim";
+            button.classList.remove("claimed"); // Reset previous styles
+            button.disabled = false; 
+        }
     });
 
-    // Ensure streakCount starts from 1 (not 2)
-    let streakIndex = Math.max(Math.min(streakCount, 7) - 1, 0); 
+    let streakIndex = Math.max(Math.min(streakCount, 7) - 1, 0);
 
     if (streakIndex >= 0 && streakIndex < rewardBoxes.length) {
         rewardBoxes[streakIndex].classList.add("active");  
         const activeButton = rewardBoxes[streakIndex].querySelector(".claim-btn");
-        if (activeButton) activeButton.style.display = "block";  
+
+        if (activeButton) {
+            activeButton.style.display = "block";  
+            if (lastClaimedDate === today) {
+                activeButton.textContent = "Claimed";
+                activeButton.classList.add("claimed"); // Add a claimed class
+                activeButton.disabled = true; 
+                activeButton.style.backgroundColor = "grey";
+                activeButton.style.cursor = "not-allowed";
+                activeButton.style.color = "white";
+                activeButton.style.border = "2px solid darkgray";
+            }
+        }
     }
 
     console.log(`Highlighting Day ${streakCount}, setting .active on reward box #${streakIndex + 1}`);
@@ -57,20 +73,16 @@ async function claimReward(uid, userData) {
         return;
     }
 
-    // Update streak (reset if a day is skipped)
     let newStreak = (userData.lastClaimedDate === getYesterdayDate()) ? userData.streakCount + 1 : 1;
     if (newStreak > 7) newStreak = 7;
 
-    // ✅ Instantly update UI before Firestore update
     let earnedPoints = dayRewards[newStreak - 1];
     userData.points += earnedPoints;
     userData.streakCount = newStreak;
     userData.lastClaimedDate = today;
 
-    // ✅ Force UI update before writing to Firestore
     document.getElementById("coin-display").textContent = `${userData.points} points`;
 
-    // ✅ Update Firestore
     const userRef = doc(db, "users", uid);
     try {
         await updateDoc(userRef, {
@@ -78,16 +90,33 @@ async function claimReward(uid, userData) {
             streakCount: userData.streakCount,
             lastClaimedDate: userData.lastClaimedDate
         });
+
         console.log(`✅ Claimed Day ${newStreak} reward: ${earnedPoints} coins`);
+
+        updateClaimButtonUI(newStreak);
     } catch (error) {
         console.error("❌ Error updating Firestore:", error);
     }
 
-    // ✅ Move claim button to the next streak day
-    highlightStreakDay(userData.streakCount);
-
-    // ✅ Refresh user data from Firestore to confirm changes
+    highlightStreakDay(userData.streakCount, today);
     fetchUserData(uid);
+}
+
+// Function to update claim button UI after claiming
+function updateClaimButtonUI(streakCount) {
+    const rewardBoxes = document.querySelectorAll(".rewards-grid .reward");
+    let streakIndex = Math.min(streakCount - 1, 6);
+
+    const button = rewardBoxes[streakIndex]?.querySelector(".claim-btn");
+    if (button) {
+        button.textContent = "Claimed";
+        button.classList.add("claimed"); 
+        button.disabled = true;
+        button.style.backgroundColor = "grey";
+        button.style.cursor = "not-allowed";
+        button.style.color = "white";
+        button.style.border = "2px solid darkgray";
+    }
 }
 
 // Function to fetch user data and attach event listeners
@@ -99,23 +128,19 @@ async function fetchUserData(uid) {
         if (userDoc.exists()) {
             let userData = userDoc.data();
 
-            // Ensure default values
             userData.points = userData.points || 0;
             userData.streakCount = userData.streakCount || 1;
             userData.lastClaimedDate = userData.lastClaimedDate || null;
 
             console.log("📢 Firestore Data Fetched:", userData);
 
-            // Update UI
             document.getElementById("username").textContent = userData.username || "No username found";
             document.getElementById("coin-display").textContent = `${userData.points} points`;
 
-            // Highlight correct day
-            highlightStreakDay(userData.streakCount);
+            highlightStreakDay(userData.streakCount, userData.lastClaimedDate);
 
-            // ✅ Attach event listeners to claim buttons
             document.querySelectorAll(".claim-btn").forEach((button, index) => {
-                button.removeEventListener("click", handleClaimClick); // Remove old listeners
+                button.removeEventListener("click", handleClaimClick); 
                 button.addEventListener("click", () => handleClaimClick(uid, userData, index + 1));
             });
 
