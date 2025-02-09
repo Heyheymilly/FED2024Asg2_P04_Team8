@@ -1,23 +1,3 @@
-// ✅ Ensure Firebase is only initialized once
-if (!firebase.apps.length) {
-    firebase.initializeApp({
-        apiKey: "AIzaSyArkJ39EwRfEaxIQKyBJ9GnZb11dM0Reis",
-        authDomain: "fed2024asg2p04team8.firebaseapp.com",
-        databaseURL: "https://fed2024asg2p04team8-default-rtdb.asia-southeast1.firebasedatabase.app",
-        projectId: "fed2024asg2p04team8",
-        storageBucket: "fed2024asg2p04team8.appspot.com",
-        messagingSenderId: "927003390866",
-        appId: "1:927003390866:web:a41ff2f994bb3c045c074b",
-        measurementId: "G-BXDFK2WDWR",
-    });
-} 
-
-// ✅ Set Global Firebase Variables (No Exports Needed)
-const db = firebase.firestore();
-const auth = firebase.auth();
-
-
-
 const wheel = document.getElementById("wheel");
 const spinBtn = document.getElementById("spin-btn");
 const finalValue = document.getElementById("final-value");

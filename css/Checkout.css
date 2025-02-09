@@ -387,7 +387,6 @@ main {
     justify-content: space-between;
 }
 
-
 footer {
     height: 5.5vh;
     border: 1px solid black;
@@ -403,6 +402,7 @@ footer {
         left: -20vw;
     }
 
+<<<<<<< HEAD
     .coin-count-container img {
         position: relative;
         left: -90px;
@@ -616,3 +616,5 @@ footer {
         padding: 10px 0;
     }
 }
+=======
+>>>>>>> 739954a8909358aa2e4c077a461b9c3e312d9eef
