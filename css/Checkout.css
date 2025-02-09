@@ -262,7 +262,7 @@ main {
     height: 70vh;
 } .payment-container-css h1 {
     text-align: center;
-    font-size: 21px;
+    font-size: 25px;
 }
 
 #payment-method-container-css {
@@ -334,7 +334,7 @@ main {
     cursor: pointer;
 } .coin-container-css button:hover {
     cursor: pointer;
-    transform: translate(0, .5px);
+    transform: translate(0, 1px);
 }
 
 
@@ -376,12 +376,13 @@ main {
 #fees-payable-container-css {
     width: 30vw;
     font-size: 15px;
+    overflow: auto;
 }
 #fees-payable-container-css div .inter {
     padding: 5px;
 }
 
-.total-container-css,.shipping-container-css, .merchandise-container-css  {
+.total-container-css,.shipping-container-css, .merchandise-container-css, .coin-discount-container-css {
     display: flex;
     justify-content: space-between;
 }
