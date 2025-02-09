@@ -393,5 +393,226 @@ footer {
     border: 1px solid black;
 }
 
+@media only screen and (max-width: 480px) {
+    
+    .sub-navbar-css {
+        width: 100vw;
+    }
+    .sub-navbar-css .kumar-one-regular {
+        position: relative;
+        left: -20vw;
+    }
 
-@media 
+    .coin-count-container img {
+        position: relative;
+        left: -90px;
+    }
+
+    .voucher-css {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* 🔹 Header */
+    .sub-navbar-css {
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .sub-navbar-css h1 {
+        font-size: 20px;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    #back-button-clicked {
+        width: 40px;
+        height: 40px;
+        margin: 5px;
+    }
+
+    #coin-count-container {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin: 5px 0;
+    }
+
+    #coin-count-container div {
+        width: auto;
+        padding: 5px 15px;
+        font-size: 14px;
+    }
+
+    /* 🔹 Delivery & Items Section */
+    .main-container {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .delivery-info-container {
+        width: 90%;
+        height: auto;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .item-container {
+        width: 95%;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item-column-css {
+        width: 90%;
+        height: auto;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .name-image-css {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #item-image-api {
+        width: 80%;
+        height: auto;
+    }
+
+    #item-name-api {
+        margin: 5px 0;
+        font-size: 18px;
+    }
+
+    .voucher-css {
+        width: 60%;
+        font-size: 14px;
+    }
+
+    .price-css {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    /* 🔹 Payment Section */
+    .payment-container-css {
+        width: 95%;
+        height: auto;
+        padding: 10px;
+        align-items: center;
+    }
+
+    #payment-method-container-css {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    #payment-method-container-css img {
+        width: 60px;
+        height: 60px;
+    }
+
+    #card-info-container-css {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #card-info-container-css input {
+        width: 80%;
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #pay-btn-css {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    #pay-btn-css button {
+        width: 80%;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    /* 🔹 Coin Usage */
+    .coin-container-css {
+        flex-direction: column;
+        width: 90%;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .coin-container-css input {
+        width: 70%;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .coin-container-css button {
+        width: 50%;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    /* 🔹 Fees & Summary */
+    #fees-payable-container-css {
+        width: 90%;
+        text-align: center;
+    }
+
+    .merchandise-container-css,
+    .shipping-container-css,
+    .coin-discount-container-css,
+    .total-container-css {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        font-size: 14px;
+        padding: 5px 0;
+    }
+
+    /* 🔹 Footer */
+    footer {
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+        height: auto;
+        padding: 10px 0;
+    }
+}
