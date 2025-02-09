@@ -20,11 +20,36 @@ import { getFirestore, updateDoc, getDoc, setDoc, doc } from "https://www.gstati
 };
 
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 const db = getFirestore(app);
 
 const userID = "IARIMHcZUjMSHMFNDzXC2mzY98l2";
 
+
+async function LoadCoinBar() {
+    const userRef = doc(db, "users", userID);
+
+    try {
+        const userSnap = await getDoc(userRef);
+
+        if(userSnap.exists()) {
+            const userData = userSnap.data();
+
+            const userPoints = userData.points || "No points";
+
+            const coinBarID = document.getElementById("coin-bar-api");
+
+            coinBarID.textContent = userPoints;
+            console.log(`points value retrieved: ${userPoints}`);
+
+        } else {
+            console.log("No userSnap for this user");
+        }
+
+    } catch(error) {
+        console.error(`Error fetching user coins ${error}`)
+    }
+}
+document.addEventListener("DOMContentLoaded", LoadCoinBar);
 
 
 async function fetchUserLocation() {
@@ -131,9 +156,46 @@ async function retrieveCartItem() {
 
 document.addEventListener("DOMContentLoaded", retrieveCartItem);
 
+async function PointDiscount() {
 
+    const userRef = doc(db, "users", userID);
+    
+    try {
+        const userSnap = await getDoc(userRef);
+        
+        if(userSnap.exists()) {
 
-function updateTotalPrice() {
+            const userData = userSnap.data();
+            const availablePoints = userData.points || "0";
+
+            let coinInput = parseInt(document.getElementById("coin-use-value-api").value) || 0;
+
+            if(coinInput > availablePoints) {
+                alert(`You have used ${coinInput - availablePoints} more than the points you currently have, please try again!`);
+                return 0;
+            }
+
+            await updateDoc(userRef, { points: availablePoints - coinInput});
+
+            const coinDiscount = coinInput / 100;
+
+            console.log(`User used ${availablePoints - coinInput} coins for a discount.`);
+            console.log(`User will receive $${coinDiscount} discount`);
+
+            return coinDiscount;
+
+        } else {
+            console.log("No userSnap for this user");
+            return 0;
+        }
+
+    } catch(error) {
+        console.error(`Error fetching coin, no discount will be included; Error: ${error}`);
+        return 0;
+    }
+}
+
+async function updateTotalPrice() {
 
     const shippingCostPerItem = 5;
     let totalMerchandise = 0;
@@ -155,10 +217,25 @@ function updateTotalPrice() {
 
     let totalPayment = totalMerchandise + totalShippingPrice;
 
+    totalPayment = Math.max(totalPayment, 0);
+
     document.getElementById("merchandise-subtotal-api").textContent =  `$${totalMerchandise}`;
     document.getElementById("shipping-subtotal-api").textContent = `$${totalShippingPrice}`;
     document.getElementById("total-payment-api").textContent = `$${totalPayment}`;
 }
+
+async function applyCoinDiscount() {
+    let coinDiscount = await PointDiscount();
+
+    let totalPayment = parseFloat(document.getElementById("total-payment-api").textContent.replace("$",""));
+    totalPayment -= coinDiscount;
+
+    totalPayment = Math.max(totalPayment, 0);
+
+    document.getElementById("coin-discount-api").textContent = `$${coinDiscount.toFixed(2)}`;
+    document.getElementById("total-payment-api").textContent = `$${totalPayment.toFixed(2)}`;
+}
+document.getElementById("use-coin-clicked-api").addEventListener("click", applyCoinDiscount);
 
 
 document.addEventListener("change", function(event){
@@ -166,3 +243,4 @@ document.addEventListener("change", function(event){
         updateTotalPrice();
     }
 });
+
