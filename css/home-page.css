@@ -299,3 +299,117 @@ footer {
 }
 
 
+
+@media only screen and (max-width: 480px) {
+    .sub-navbar-css {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+        height: auto;
+    }
+
+    .title-slogan-container-css h1 {
+        font-size: 26px;
+    }
+
+    .title-slogan-container-css h4 {
+        font-size: 14px;
+        margin-top: -8px;
+    }
+
+    /* Search Bar */
+    #search-bar {
+        width: 90%;
+        font-size: 18px;
+        padding: 8px;
+        margin-top: 10px;
+    }
+
+    /* Coin Count Container Fix */
+    #coin-count-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 87, 34, 0.9);
+        border-radius: 10px;
+        padding: 8px 15px;
+        margin-top: 10px;
+    }
+
+    #coin-count-container img {
+        width: 35px;
+        height: 35px;
+        margin-right: 5px;
+    }
+
+    #coin-count {
+        font-size: 18px;
+        color: white;
+    }
+
+    /* Profile Button Fix */
+    .profile-button-css {
+        margin-top: 10px;
+    }
+
+    .profile-button-css img {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Category Section */
+    .category-items-css ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+        gap: 10px;
+    }
+
+    .category-items-css li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .category-items-css li button img {
+        width: 45px;
+        height: 45px;
+    }
+
+    /* Daily Rewards Section Fix */
+    .rewards-items-css {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #days, #coins {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    #coins li {
+        width: 40px;
+        text-align: center;
+    }
+
+    #coins img {
+        width: 35px;
+        height: 35px;
+    }
+
+    #claim-reward-clicked {
+        width: 50%;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+}

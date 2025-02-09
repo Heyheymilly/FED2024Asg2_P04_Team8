@@ -147,3 +147,92 @@ main {
     color: white;
     box-shadow: 0 2px 6px rgba(0, 100, 0, 0.3);
 }
+
+
+/* Media Query for Tablets (Max Width: 768px) */
+@media only screen and (max-width: 768px) {
+    .shop-img-container-css {
+        margin-right: 0;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header-text-css h1 {
+        font-size: 32px;
+    }
+
+    .header-text-css div {
+        font-size: 30px;
+        margin-top: 5vh;
+    }
+
+    .input-container-css input {
+        width: 50vw; /* Makes input fields wider */
+        height: 8vh;
+    }
+
+    #submit-clicked {
+        width: 25vw;
+        font-size: 22px;
+        padding: 10px;
+    }
+
+    .input-container-css a {
+        margin-right: 10vw;
+        font-size: 14px;
+    }
+}
+
+/* Media Query for Mobile Devices (Max Width: 480px) */
+@media only screen and (max-width: 480px) {
+    .shop-img-container-css {
+        height: auto;
+        margin-top: 5vh;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .shop-img-container-css img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .header-text-css h1 {
+        font-size: 24px;
+    }
+
+    .header-text-css h4 {
+        font-size: 14px;
+        margin-top: -2vh;
+    }
+
+    .header-text-css div {
+        font-size: 26px;
+        margin-top: 3vh;
+    }
+
+    .input-container-css {
+        height: auto;
+        row-gap: 3vh;
+    }
+
+    .input-container-css input {
+        width: 80vw; /* Make inputs full width */
+        height: 6vh;
+        font-size: 16px;
+    }
+
+    .input-container-css a {
+        margin-right: 5vw;
+        font-size: 13px;
+    }
+
+    #submit-clicked {
+        width: 50vw;
+        font-size: 18px;
+        padding: 8px;
+        border-radius: 20px;
+    }
+}
