@@ -167,11 +167,11 @@ main {
     }
 
     .input-container-css input {
-        width: 80vw;
+        width: 70vw;
     } 
     
     #otp {
-        width: 40vw;
+        width: 30vw;
         margin-right: 40vw;
     }
     
@@ -215,13 +215,13 @@ main {
     }
 
     .input-container-css input {
-        width: 80vw;
+        width: 70vw;
         font-size: 18px;
     } 
     
 
     #otp {
-        width: 40vw;
+        width: 30vw;
         margin-right: 40vw;
     }
     
