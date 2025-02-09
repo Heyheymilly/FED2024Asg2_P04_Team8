@@ -1,0 +1,117 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+  
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #c3f1a3, #14e964); /* Green Gradient */
+}
+
+.wrapper {
+    width: 90%;
+    max-width: 34.37em;
+    max-height: 90vh;
+    background-color: #ffffff;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 3em;
+    border-radius: 1em;
+    box-shadow: 0 4em 5em rgba(8, 53, 27, 0.2); /* Adjusted to match green theme */
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#wheel {
+    max-height: inherit;
+    width: inherit;
+    top: 0;
+    padding: 0;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#spin-btn {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    height: 26%;
+    width: 26%;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 0;
+    background: radial-gradient(#b3fd3b 50%, #40d840 85%); /* Green Button */
+    color: #167e16;
+    text-transform: uppercase;
+    font-size: 1.8em;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+}
+
+img {
+    position: absolute;
+    width: 4em;
+    top: 45%;
+    right: -8%;
+}
+
+#final-value {
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 1.5em;
+    color: #202020;
+    font-weight: 500;
+}
+
+/* Return Home Button */
+.return-button {
+    position: fixed;
+    top: 1em;
+    left: 1.5em;
+    background: linear-gradient(135deg, #14e964, #0ca84f); /* Green Gradient */
+    color: white;
+    padding: 0.8em 2em;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid #0ca84f;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Add an icon before the text */
+.return-button::before {
+    content: "🏠"; /* Home Emoji */
+    font-size: 1.2em;
+}
+
+/* Hover Effect */
+.return-button:hover {
+    background: linear-gradient(135deg, #0ca84f, #08863a);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Click Effect */
+.return-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
