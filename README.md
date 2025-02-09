@@ -77,6 +77,9 @@ Checkout Page
 - The user can select the product and on the right it will update the price
 - The user can use the coins they have collected over time
 
+#GitHub
+https://github.com/Heyheymilly/FED2024Asg2_P04_Team8
+
 # Credits
 
 ## Content
