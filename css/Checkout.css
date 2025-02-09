@@ -68,6 +68,35 @@ main {
     align-items: center;
 }
 
+#coin-count-container {
+    height: 5vh;
+    width: 12vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 1.5vw;
+    margin-left: 10%;
+} #coin-count-container div {
+    background-color: rgb(247, 76, 19);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 45px;
+    border-radius: 5px;
+    border: 2px solid orange;
+    padding-right: 30px;
+    padding-left: 30px;
+    font-size: 17px;
+    color: white;
+    width: 100px;
+} #coin-count-container img {
+    padding: 0;
+    position: relative;
+    border: 2px solid orange;
+    left: 20px;
+    top: 1px;
+    border-radius: 50px;
+}
 
 #back-button-clicked {
     width: 50px;
@@ -269,6 +298,47 @@ main {
     width: 5vw;
 }
 
+
+.coin-container-css {
+    display: flex;
+    flex-direction: row;
+    width: 30vw;
+    height: 5vh;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.coin-container-css div {
+    width: 50%;
+    height: 100%;
+    padding-left: 10px;
+    align-content: center;
+    background-color: white;
+    font-size: 13px;
+    color: black;
+} .coin-container-css input {
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px solid black;
+    width: 20%;
+    height: 90%;
+    background-color: #ffdfdf;
+    color:#081205;
+} .coin-container-css button {
+    height: 100%;
+    width: 20%;
+    color: white;
+    background: darkgreen;
+    border: 2px solid black;
+    cursor: pointer;
+} .coin-container-css button:hover {
+    cursor: pointer;
+    transform: translate(0, .5px);
+}
+
+
+/* 
 #pay-btn-css {
     display: flex;
     flex-direction: row;
@@ -287,7 +357,7 @@ main {
    
 }#pay-btn-css button:hover {
     transform: translate(0,2px);
-}
+} */
 
 
 #voucher-btn-css {
@@ -305,7 +375,6 @@ main {
 
 #fees-payable-container-css {
     width: 30vw;
-    border: 1px solid red;
     font-size: 15px;
 }
 #fees-payable-container-css div .inter {

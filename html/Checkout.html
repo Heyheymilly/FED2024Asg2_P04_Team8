@@ -46,14 +46,19 @@
     <body>
         <header>
             <div class="sub-navbar-css">
-
                 <button id="back-button-clicked"><img src="/media/back-arrow.png" alt="back-arrow image" height="50" width="50"></button>
                 <h1 class="kumar-one-regular">Checkout Page</h1>
+
+                <div id="coin-count-container">
+                    <img src="/media/coins.png" alt="coins" width="45" height="45">
+                    <div id="coin-bar-api" class="ibm-plex-mono-regular">loading...</div>
+                </div>
             </div>
         </header>   
         
         <main>
-       
+            
+
             <div class="main-container">
                 <div class="item-delivery-container"> <!-- overflow -->
 
@@ -111,8 +116,11 @@
                         </div>
                     </div>
 
-
-                    <button id="voucher-btn-css" class="kumar-one-regular">Platform voucher</button>
+                    <div class="coin-container-css">
+                        <div class="inter">Enter amount of coin to use:</div>
+                        <input type="number" id="coin-use-value-api" class="kumar-one-regular">
+                        <button class="inter" id="use-coin-clicked-api">Use</button>
+                    </div>
 
                     <div id="fees-payable-container-css">
                         <div class="merchandise-container-css">

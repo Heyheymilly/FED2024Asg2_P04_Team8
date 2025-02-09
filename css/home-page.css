@@ -80,7 +80,6 @@ main {
     width: 12vw;
     display: flex;
     justify-content: center;
-    border: 1px solid red;
     flex-direction: row;
     margin-bottom: 1.5vw;
 } #coin-count-container div {
@@ -143,7 +142,6 @@ main {
     flex-direction: column;
     flex-wrap: wrap;
     margin-left: 15vw;
-    border: 1px solid red;
 }
 
 /* Container header */
