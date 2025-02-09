@@ -80,11 +80,13 @@ Checkout Page
 #GitHub
 https://github.com/Heyheymilly/FED2024Asg2_P04_Team8
 
+#Presentation Video
+https://drive.google.com/file/d/1eYv1bBgryjp9t-aQY-OulZakgmOVjOCg/view?usp=sharing
+
 # Credits
 
 ## Content
 Lottie (https://app.lottiefiles.com/animation/ddb0f21b-9b13-413d-9e9b-1498002adafb?channel=web&source=public-animation&panel=download)
-
 
 ## Image
 Back Arrow - https://www.iconfinder.com/icons/arrow-back
