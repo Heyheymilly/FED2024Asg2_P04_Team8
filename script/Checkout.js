@@ -19,8 +19,6 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 const userID = "IARIMHcZUjMSHMFNDzXC2mzY98l2";
-
-
 async function LoadCoinBar() {
     const userRef = doc(db, "users", userID);
 
