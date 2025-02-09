@@ -18,7 +18,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 // **🔥 Replace with dynamic user ID when authentication is implemented**
-const USER_ID = "YwKm4YUfPgXVqeClrLXs8C59F3o1"; 
+const USER_ID = "IARIMHcZUjMSHMFNDzXC2mzY98l2"; 
 
 // **📌 Function to fetch user data & update coin counter**
 async function fetchUserData() {
@@ -104,4 +104,5 @@ document.getElementById('checkout-option-clicked').addEventListener('click', fun
 });
 
 // **🔥 Run Script on Page Load**
-fetchUserData();
+document.addEventListener("DOMContentLoaded", fetchUserData());
+

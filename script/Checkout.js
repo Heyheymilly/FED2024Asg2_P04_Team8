@@ -1,8 +1,8 @@
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.0/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.3.0/firebase-analytics.js";
-import { getFirestore, updateDoc, getDoc, setDoc, doc } from "https://www.gstatic.com/firebasejs/11.3.0/firebase-firestore.js";
+import { getFirestore, updateDoc, getDoc, doc } from "https://www.gstatic.com/firebasejs/11.3.0/firebase-firestore.js";
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.3.0/firebase-auth.js";
     // TODO: Add SDKs for Firebase products that you want to use
     // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -23,8 +23,6 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 const userID = "IARIMHcZUjMSHMFNDzXC2mzY98l2";
-
-
 async function LoadCoinBar() {
     const userRef = doc(db, "users", userID);
 
